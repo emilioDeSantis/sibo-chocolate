@@ -10,19 +10,19 @@ const ParallaxPage = () => {
                 let translateY = 0;
                 switch (index) {
                     case 0:
-                        translateY = -(window.pageYOffset * -35) / 100;
+                        translateY = (window.pageYOffset * 50) / 100;
                         break;
                     case 1:
-                        translateY = -(window.pageYOffset * -28) / 100;
+                        translateY = (window.pageYOffset * 45) / 100;
                         break;
                     case 2:
-                        translateY = -(window.pageYOffset * -15) / 100;
+                        translateY = (window.pageYOffset * 38) / 100;
                         break;
                     case 3:
-                        translateY = -(window.pageYOffset * 0) / 100;
+                        translateY = (window.pageYOffset * 25) / 100;
                         break;
                     case 4:
-                        translateY = -(window.pageYOffset * 50) / 100;
+                        translateY = (window.pageYOffset * 0) / 100;
                         break;
                     default:
                         break;
