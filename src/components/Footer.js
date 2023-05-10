@@ -4,6 +4,9 @@ const Footer = ({ currentProduct }) => {
     if (!currentProduct) return null;
 
     return (
+        // <div style={{
+        //     position: "fixed",
+        // }}>
         <footer
             style={{
                 position: "fixed",
@@ -72,6 +75,7 @@ const Footer = ({ currentProduct }) => {
                 Add to Bag
             </button>
         </footer>
+        // </div>
     );
 };
 
