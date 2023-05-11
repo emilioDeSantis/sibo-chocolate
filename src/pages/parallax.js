@@ -411,7 +411,7 @@
 
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
-import ParallaxDiv from "@/components/Parallaxdiv";
+import ParallaxDiv from "@/components/ParallaxDiv";
 
 const ParallaxPage = () => {
     return (
