@@ -411,7 +411,7 @@
 
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
-import ParallaxDiv from "@/components/ParallaxDiv";
+import ParallaxDiv from "./ParallaxDiv";
 
 const ParallaxPage = () => {
     return (
@@ -524,6 +524,108 @@ const ParallaxPage = () => {
                             objectFit: "cover",
                         }}
                     />
+                </div>
+            </ParallaxDiv>
+            <ParallaxDiv
+                marginTop={"60vw"}
+                scrollSpeed={0.5}
+                fadeInThreshold={-100}
+                fadeOutThreshold={10}
+            >
+            <div
+                style={{
+                    width: "100vw",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "flex-start",
+                    paddingInline: "4vw",
+                }}
+            >
+                <div
+                    style={{
+                        width: "100%",
+                        textAlign: "center",
+                        fontSize: "14vw",
+                        fontWeight: "900",
+                        color: "#441812",
+                        lineHeight: "100%",
+                    }}
+                >
+                    FRESH FROM THE SOURCE
+                </div>
+                <div
+                    style={{
+                        marginTop: "4vw",
+                        width: "100%",
+                        textAlign: "center",
+                        fontSize: "5vw",
+                        fontWeight: "700",
+                        color: "#441812",
+                    }}
+                >
+                    Costa Rican Origin Chocolate
+                </div>
+            </div>
+            </ParallaxDiv>
+            <ParallaxDiv
+                marginTop={"60vw"}
+                scrollSpeed={0.2}
+                fadeInThreshold={120}
+                fadeOutThreshold={500}
+            >
+                <div
+                    style={{
+                        position: "absolute",
+                        top: "5vw",
+                        display: "flex",
+                        flexDirection: "column",
+                        // background: "#ffffff",
+                        // borderRadius: '4vw',
+                        paddingInline: "4vw",
+                        paddingBlock: "6vw",
+                        width: "100vw",
+                        color: "#343443",
+                    }}
+                >
+                    <div
+                        style={{
+                            width: "100%",
+                            fontSize: "10vw",
+                            fontWeight: "900",
+                            lineHeight: "108%",
+                            // textTransform: "uppercase",
+                        }}
+                    >
+                        Nurtured from the Depths of the Earth
+                    </div>
+                    <div
+                        style={{
+                            width: "100%",
+                            fontSize: "4.5vw",
+                            fontWeight: "400",
+                            lineHeight: "124%",
+                            marginTop: "4vw",
+                            letterSpacing: "0.01em",
+                            // textTransform: "uppercase",
+                        }}
+                    >
+                        The soil, enriched by the volcanic ash, teems with rare
+                        nutrients that nourish and sustain.
+                    </div>
+                    <div
+                        style={{
+                            width: "100%",
+                            fontSize: "10vw",
+                            fontWeight: "400",
+                            lineHeight: "124%",
+                            marginTop: "4vw",
+                            letterSpacing: "0.01em",
+                            // textTransform: "uppercase",
+                        }}
+                    >
+                        Learn More
+                    </div>
                 </div>
             </ParallaxDiv>
         </div>
