@@ -1479,56 +1479,64 @@ import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import ParallaxDiv from "./ParallaxDiv";
 import Line from "@/components/Line";
+import Logo from "@/components/Logo";
+import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
+import { useColor } from "@/components/Providers/ColorProvider";
 
 const ParallaxPage = () => {
+    useEffect(() => {
+        document.body.style.backgroundColor = "#faf1e3";
+    }, []);
     return (
         <div
             style={{
-                height: "4000vw",
+                height: "500vw",
                 position: "relative",
                 overflow: "hidden",
+                background: "#111905",
             }}
         >
             <ParallaxImage
-                marginTop={"0vw"}
+                marginTop={"-60vw"}
                 scrollSpeed={0.4}
                 src="/sky x2.png"
-                height="260vw"
+                height="200vw"
             />
             <ParallaxImage
-                marginTop={"190vw"}
+                marginTop={"40vw"}
                 scrollSpeed={0.5}
                 src="/volcano x2.png"
                 height="100vw"
             />
             <ParallaxImage
-                marginTop={"270vw"}
+                marginTop={"95vw"}
                 scrollSpeed={0.6}
                 src="/hills x4.png"
                 height="100vw"
             />
             <ParallaxImage
-                marginTop={"330vw"}
+                marginTop={"130vw"}
                 scrollSpeed={0.7}
                 src="/hills 2 x3.png"
                 height="100vw"
             />
             <ParallaxImage
-                marginTop={"370vw"}
+                marginTop={"150vw"}
                 scrollSpeed={0.8}
                 src="/foliage x7.png"
                 height="300vw"
             />
 
             <ParallaxImage
-                marginTop={"410vw"}
+                marginTop={"160vw"}
                 scrollSpeed={0.9}
-                src="/foliage 2 x2.png"
+                src="/foliage 2 x10.png"
                 height="300vw"
             />
 
             <ParallaxDiv
-                marginTop={"300vw"}
+                marginTop={"20vw"}
                 scrollSpeed={1}
                 // fadeInThreshold={-100}
                 // fadeOutThreshold={20}
@@ -1540,39 +1548,248 @@ const ParallaxPage = () => {
                         flexDirection: "column",
                         alignItems: "center",
                         justifyContent: "flex-start",
-                        paddingInline: "4vw",
+                        paddingInline: "3vw",
                     }}
                 >
                     <div
                         style={{
+                            width: "44vw",
+                        }}
+                    >
+                        <Logo color={"#441812"} />
+                    </div>
+                    <Link
+                        href="/shop/milk-bars"
+                        style={{
+                            marginTop: "8vw",
+                            background: "#441812",
+                            color: "#fff",
+                            textTransform: "uppercase",
+                            paddingBlock: "3vw",
+                            borderRadius: "1vw",
+                            paddingInline: "12vw",
                             width: "100%",
-                            textAlign: "center",
-                            fontSize: "14vw",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            gap: "3vw",
+                        }}
+                    >
+                        <div
+                            style={{
+                                textAlign: "center",
+                                paddingTop: "1vw",
+                                fontSize: "5vw",
+                                fontWeight: "400",
+                                textTransform: "uppercase",
+                                borderRadius: "2vw",
+                                display: "flex",
+                                flexDirection: "column",
+                            }}
+                        >
+                            Chocolates
+                        </div>
+                        <ArrowLongRightIcon width={"7vw"} />
+                    </Link>
+                </div>
+            </ParallaxDiv>
+
+            <ParallaxDiv
+                marginTop={"180vw"}
+                scrollSpeed={1}
+                // fadeInThreshold={70}
+                // fadeOutThreshold={250}
+            >
+                <div
+                    style={{
+                        paddingInline: "3vw",
+                        color: "#faf1e3",
+                    }}
+                >
+                    <div
+                        style={{
+                            // width: "100%",
+                            fontSize: "11vw",
                             fontWeight: "900",
-                            color: "#441812",
-                            lineHeight: "100%",
+                            lineHeight: "120%",
+                            letterSpacing: "0.05em",
+                            // textAlign: 'center',
+                            // textTransform: "uppercase",
                         }}
                     >
-                        FRESH FROM THE SOURCE
+                        {"Born from Rich Volcanic Soil"}
                     </div>
+
                     <div
                         style={{
-                            marginTop: "4vw",
-                            width: "100%",
-                            textAlign: "center",
-                            fontSize: "5vw",
-                            fontWeight: "700",
-                            color: "#441812",
+                            // width: "100%",
+                            fontSize: "4vw",
+                            fontWeight: "200",
+                            lineHeight: "150%",
+                            letterSpacing: "0.05em",
+                            marginTop: "6vw",
+                            // textAlign: 'center',
+                            // textTransform: "uppercase",
                         }}
                     >
-                        Costa Rican Origin Chocolate
+                        {"Costa Rica's mineral-rich volcanic soil, brimming with fertility, boosts cocoa growth and imbues the beans with a unique, complex flavor, lending a distinct taste to its chocolate."}
                     </div>
+
+                    <Link
+                        href="/demo"
+                        style={{
+                            marginTop: "10vw",
+                            background: "#faf1e3",
+                            color: "#000",
+                            paddingBlock: "3vw",
+                            borderRadius: "1vw",
+                            paddingInline: "1vw",
+                            width: "54vw",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            gap: "3vw",
+                        }}
+                    >
+                        <div
+                            style={{
+                                textAlign: "center",
+                                paddingTop: "0.4vw",
+                                fontSize: "5vw",
+                                fontWeight: "400",
+                                // textTransform: "uppercase",
+                                borderRadius: "2vw",
+                                display: "flex",
+                                flexDirection: "column",
+                            }}
+                        >
+                            learn More
+                        </div>
+                        <ArrowLongRightIcon width={"7vw"} />
+                    </Link>
+                </div>
+            </ParallaxDiv>
+            {/* <ParallaxDiv
+                marginTop={"180vw"}
+                scrollSpeed={1}
+                // fadeInThreshold={70}
+                // fadeOutThreshold={250}
+            >
+                                <div
+                    style={{
+                        // width: "100%",
+                        fontSize: "11vw",
+                        fontWeight: "900",
+                        lineHeight: "120%",
+                        marginInline: "8vw",
+                        marginBottom: '6vw',
+                        letterSpacing: "0.05em",
+                        // textAlign: 'center',
+                        color: "#F5E2C6",
+                        // textTransform: "uppercase",
+                    }}
+                >
+                    {"Born from Rich Volcanic Soil"}
+                </div>
+            <div
+                style={{
+                    position: "relative",
+                    width: "84vw",
+                    height: '100vw',
+                    marginInline: '8vw',
+                }}
+            >
+                <Image
+                    src={'/test2.png'}
+                    alt="sky"
+                    fill
+                    sizes="40vw"
+                    priority
+                    style={{
+                        objectFit: "cover",
+                    }}
+                />
+            </div>
+            </ParallaxDiv> */}
+
+            <ParallaxDiv
+                marginTop={"340vw"}
+                scrollSpeed={1}
+                // fadeInThreshold={70}
+                // fadeOutThreshold={250}
+            >
+                <div
+                    style={{
+                        paddingInline: "3vw",
+                        color: "#faf1e3",
+                    }}
+                >
+                    <div
+                        style={{
+                            // width: "100%",
+                            fontSize: "11vw",
+                            fontWeight: "900",
+                            lineHeight: "120%",
+                            letterSpacing: "0.05em",
+                            // textAlign: 'center',
+                            // textTransform: "uppercase",
+                        }}
+                    >
+                        {"Amidst the Lush Rainforest"}
+                    </div>
+
+                    <div
+                        style={{
+                            // width: "100%",
+                            fontSize: "4vw",
+                            fontWeight: "200",
+                            lineHeight: "150%",
+                            letterSpacing: "0.05em",
+                            marginTop: "6vw",
+                            // textAlign: 'center',
+                            // textTransform: "uppercase",
+                        }}
+                    >
+                        {"Costa Rica's humid rainforest, rich with biodiversity, infuses its cocoa beans with a spectrum of flavors, reflecting the forest's vibrancy and enhancing the unique taste of Costa Rican chocolate."}
+                    </div>
+
+                    <Link
+                        href="/demo"
+                        style={{
+                            marginTop: "10vw",
+                            background: "#faf1e3",
+                            color: "#000",
+                            paddingBlock: "3vw",
+                            borderRadius: "1vw",
+                            paddingInline: "1vw",
+                            width: "54vw",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            gap: "3vw",
+                        }}
+                    >
+                        <div
+                            style={{
+                                textAlign: "center",
+                                paddingTop: "0.4vw",
+                                fontSize: "5vw",
+                                fontWeight: "400",
+                                // textTransform: "uppercase",
+                                borderRadius: "2vw",
+                                display: "flex",
+                                flexDirection: "column",
+                            }}
+                        >
+                            learn More
+                        </div>
+                        <ArrowLongRightIcon width={"7vw"} />
+                    </Link>
                 </div>
             </ParallaxDiv>
 
-
-            <ParallaxDiv
-                marginTop={"460vw"}
+            {/* <ParallaxDiv
+                marginTop={"340vw"}
                 scrollSpeed={1}
                 // fadeInThreshold={70}
                 // fadeOutThreshold={250}
@@ -1586,82 +1803,47 @@ const ParallaxPage = () => {
                         marginInline: "8vw",
                         letterSpacing: "0.05em",
                         // textAlign: 'center',
-                        color: "#fdb",
+                        color: "#F5E2C6",
                         // textTransform: "uppercase",
                     }}
                 >
-                    {"Born from Costa Rica's Volcanic Womb"}
+                    {"Amidst the Lush Rainforest"}
                 </div>
-            </ParallaxDiv>
 
-
-
-            <ParallaxDiv
-                marginTop={"610vw"}
-                scrollSpeed={1}
-                // fadeInThreshold={70}
-                // fadeOutThreshold={250}
-            >
-                <div
+                <Link
+                    href="/demo"
                     style={{
-                        // width: "100%",
-                        fontSize: "11vw",
-                        fontWeight: "900",
-                        lineHeight: "120%",
                         marginInline: "8vw",
-                        letterSpacing: "0.05em",
-                        // textAlign: 'center',
-                        color: "#bef",
-                        // textTransform: "uppercase",
-                    }}
-                >
-                    {"Amidst the Rainforest's Heartbeat"}
-                </div>
-            </ParallaxDiv>
-            {/* <div style={{
-                position: 'absolute',
-                display: 'flex',
-                flexDirection: 'column',
-                paddingInline: '3vw',
-
-            }}>
-                <div
-                    style={{
-                        width: "100vw",
+                        marginTop: "8vw",
+                        background: "#F5E2C6",
+                        color: "#000",
+                        paddingBlock: "3vw",
+                        borderRadius: "1vw",
+                        paddingInline: "1vw",
+                        width: "54vw",
                         display: "flex",
-                        flexDirection: "column",
                         alignItems: "center",
-                        justifyContent: "flex-start",
-                        paddingInline: "4vw",
-                        marginTop: '300vw',
+                        justifyContent: "center",
+                        gap: "3vw",
                     }}
                 >
                     <div
                         style={{
-                            width: "100%",
                             textAlign: "center",
-                            fontSize: "14vw",
-                            fontWeight: "900",
-                            color: "#441812",
-                            lineHeight: "100%",
-                        }}
-                    >
-                        FRESH FROM THE SOURCE
-                    </div>
-                    <div
-                        style={{
-                            marginTop: "4vw",
-                            width: "100%",
-                            textAlign: "center",
+                            paddingTop: "0.4vw",
                             fontSize: "5vw",
-                            fontWeight: "700",
-                            color: "#441812",
+                            fontWeight: "400",
+                            // textTransform: "uppercase",
+                            borderRadius: "2vw",
+                            display: "flex",
+                            flexDirection: "column",
                         }}
                     >
-                        Costa Rican Origin Chocolate
+                        learn More
                     </div>
-                </div>
-            </div> */}
+                    <ArrowLongRightIcon width={"7vw"} />
+                </Link>
+            </ParallaxDiv> */}
         </div>
     );
 };
