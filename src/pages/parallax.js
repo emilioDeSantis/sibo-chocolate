@@ -1527,6 +1527,49 @@ const ParallaxPage = () => {
                 height="300vw"
             />
 
+            {/* <ParallaxDiv
+                marginTop={"0vw"}
+                scrollSpeed={0}
+                fadeInThreshold={-100}
+                fadeOutThreshold={20}
+            >
+                <div
+                    style={{
+                        width: "100vw",
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        justifyContent: "flex-start",
+                        paddingInline: "4vw",
+                    }}
+                >
+                    <div
+                        style={{
+                            width: "100%",
+                            textAlign: "center",
+                            fontSize: "14vw",
+                            fontWeight: "900",
+                            color: "#441812",
+                            lineHeight: "100%",
+                        }}
+                    >
+                        FRESH FROM THE SOURCE
+                    </div>
+                    <div
+                        style={{
+                            marginTop: "4vw",
+                            width: "100%",
+                            textAlign: "center",
+                            fontSize: "5vw",
+                            fontWeight: "700",
+                            color: "#441812",
+                        }}
+                    >
+                        Costa Rican Origin Chocolate
+                    </div>
+                </div>
+            </ParallaxDiv>
+
             <ParallaxDiv
                 marginTop={"60vw"}
                 scrollSpeed={1}
@@ -1591,29 +1634,51 @@ const ParallaxPage = () => {
                 >
                     {"Born from Costa Rica's Volcanic Womb"}
                 </div>
-            </ParallaxDiv>
-            <ParallaxDiv
-                marginTop={"550vw"}
-                scrollSpeed={1}
-                // fadeInThreshold={310}
-                // fadeOutThreshold={450}
-            >
+            </ParallaxDiv> */}
+            <div style={{
+                position: 'absolute',
+                display: 'flex',
+                flexDirection: 'column',
+                paddingInline: '3vw',
+
+            }}>
                 <div
                     style={{
-                        // width: "100%",
-                        fontSize: "11vw",
-                        fontWeight: "900",
-                        lineHeight: "120%",
-                        marginInline: "8vw",
-                        letterSpacing: "0.05em",
-                        // textAlign: 'center',
-                        color: "#efc",
-                        // textTransform: "uppercase",
+                        width: "100vw",
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        justifyContent: "flex-start",
+                        paddingInline: "4vw",
+                        marginTop: '300vw',
                     }}
                 >
-                    {"Amidst the Rainforest's Heartbeat"}
+                    <div
+                        style={{
+                            width: "100%",
+                            textAlign: "center",
+                            fontSize: "14vw",
+                            fontWeight: "900",
+                            color: "#441812",
+                            lineHeight: "100%",
+                        }}
+                    >
+                        FRESH FROM THE SOURCE
+                    </div>
+                    <div
+                        style={{
+                            marginTop: "4vw",
+                            width: "100%",
+                            textAlign: "center",
+                            fontSize: "5vw",
+                            fontWeight: "700",
+                            color: "#441812",
+                        }}
+                    >
+                        Costa Rican Origin Chocolate
+                    </div>
                 </div>
-            </ParallaxDiv>
+            </div>
         </div>
     );
 };
