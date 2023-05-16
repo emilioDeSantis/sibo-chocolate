@@ -409,6 +409,1072 @@
 
 // export default ParallaxPage;
 
+// import React, { useEffect, useRef } from "react";
+// import Image from "next/image";
+// import ParallaxDiv from "./ParallaxDiv";
+// import Line from "@/components/Line";
+
+// const ParallaxPage = () => {
+//     return (
+//         <div
+//             style={{
+//                 height: "4000vw",
+//                 position: "relative",
+//                 overflow: "hidden",
+//             }}
+//         >
+//             <ParallaxDiv marginTop={"0vw"} scrollSpeed={0.4}>
+//                 <div
+//                     style={{
+//                         position: "relative",
+//                         width: "100vw",
+//                         height: "600vw",
+//                     }}
+//                 >
+//                     <Image
+//                         src="/sky.png"
+//                         alt="sky"
+//                         fill
+//                         sizes="100vw"
+//                         priority
+//                         style={{
+//                             objectFit: "cover",
+//                         }}
+//                     />
+//                 </div>
+//             </ParallaxDiv>
+//             <ParallaxDiv marginTop={"30vw"} scrollSpeed={0.5}>
+//                 <div
+//                     style={{
+//                         position: "relative",
+//                         width: "100vw",
+//                         height: "517vw",
+//                     }}
+//                 >
+//                     <Image
+//                         src="/volcano.png"
+//                         alt="sky"
+//                         fill
+//                         sizes="100vw"
+//                         priority
+//                         style={{
+//                             objectFit: "cover",
+//                         }}
+//                     />
+//                 </div>
+//             </ParallaxDiv>
+
+//             <ParallaxDiv marginTop={"330vw"} scrollSpeed={0.5}>
+//                 <div
+//                     style={{
+//                         position: "relative",
+//                         width: "100vw",
+//                         height: "200vw",
+//                     }}
+//                 >
+//                     <Image
+//                         src="/forest back.png"
+//                         alt="sky"
+//                         fill
+//                         sizes="100vw"
+//                         priority
+//                         style={{
+//                             objectFit: "cover",
+//                         }}
+//                     />
+//                 </div>
+//             </ParallaxDiv>
+
+//             <ParallaxDiv marginTop={"30vw"} scrollSpeed={0.6}>
+//                 <div
+//                     style={{
+//                         position: "relative",
+//                         width: "100vw",
+//                         height: "517vw",
+//                     }}
+//                 >
+//                     <Image
+//                         src="/hills.png"
+//                         alt="sky"
+//                         fill
+//                         sizes="100vw"
+//                         priority
+//                         style={{
+//                             objectFit: "cover",
+//                         }}
+//                     />
+//                 </div>
+//             </ParallaxDiv>
+
+//             <ParallaxDiv
+//                 marginTop={"60vw"}
+//                 scrollSpeed={1}
+//                 fadeInThreshold={-100}
+//                 fadeOutThreshold={20}
+//             >
+//                 <div
+//                     style={{
+//                         width: "100vw",
+//                         display: "flex",
+//                         flexDirection: "column",
+//                         alignItems: "center",
+//                         justifyContent: "flex-start",
+//                         paddingInline: "4vw",
+//                     }}
+//                 >
+//                     <div
+//                         style={{
+//                             width: "100%",
+//                             textAlign: "center",
+//                             fontSize: "14vw",
+//                             fontWeight: "900",
+//                             color: "#441812",
+//                             lineHeight: "100%",
+//                         }}
+//                     >
+//                         FRESH FROM THE SOURCE
+//                     </div>
+//                     <div
+//                         style={{
+//                             marginTop: "4vw",
+//                             width: "100%",
+//                             textAlign: "center",
+//                             fontSize: "5vw",
+//                             fontWeight: "700",
+//                             color: "#441812",
+//                         }}
+//                     >
+//                         Costa Rican Origin Chocolate
+//                     </div>
+//                 </div>
+//             </ParallaxDiv>
+
+//             <ParallaxDiv
+//                 marginTop={"120vw"}
+//                 scrollSpeed={0.5}
+//                 fadeInThreshold={100}
+//                 fadeOutThreshold={260}
+//             >
+//                 <div
+//                     style={{
+//                         width: "100vw",
+//                         display: "flex",
+//                         flexDirection: "column",
+//                         alignItems: "center",
+//                         justifyContent: "flex-start",
+//                         paddingInline: "4vw",
+//                         color: "#343443",
+//                     }}
+//                 >
+//                     <div
+//                         style={{
+//                             width: "100%",
+//                             textAlign: "center",
+//                             fontSize: "12vw",
+//                             fontWeight: "900",
+//                             lineHeight: "100%",
+//                             textTransform: 'uppercase',
+//                         }}
+//                     >
+//                         Born from Costa Rica's Volcanic Womb
+//                     </div>
+//                 </div>
+//             </ParallaxDiv>
+
+//             {/* <ParallaxDiv
+//                 marginTop={"100vw"}
+//                 scrollSpeed={0.24}
+//                 fadeInThreshold={130}
+//                 fadeOutThreshold={700}
+//             >
+//                 <div
+//                     style={{
+//                         position: "absolute",
+//                         top: "5vw",
+//                         display: "flex",
+//                         flexDirection: "column",
+//                         // background: "#ffffff",
+//                         // borderRadius: '4vw',
+//                         paddingBlock: "6vw",
+//                         width: "100vw",
+//                         color: "#343443",
+//                     }}
+//                 >
+//                     <div
+//                         style={{
+//                             width: "100%",
+//                             fontSize: "18vw",
+//                             fontWeight: "200",
+//                             lineHeight: "108%",
+//                             marginInline: "4vw",
+//                             marginBottom: "4vw",
+//                             letterSpacing: "0.24em",
+//                             // textTransform: "uppercase",
+//                         }}
+//                     >
+//                         01
+//                     </div>
+//                 </div>
+//             </ParallaxDiv>
+//             <ParallaxDiv
+//                 marginTop={"100vw"}
+//                 scrollSpeed={0.24}
+//                 fadeInThreshold={135}
+//                 fadeOutThreshold={700}
+//             >
+//                 <div
+//                     style={{
+//                         position: "absolute",
+//                         top: "5vw",
+//                         display: "flex",
+//                         flexDirection: "column",
+//                         // background: "#ffffff",
+//                         // borderRadius: '4vw',
+//                         paddingBlock: "6vw",
+//                         width: "100vw",
+//                         color: "#343443",
+//                     }}
+//                 >
+//                     <div
+//                         style={{
+//                             width: "100%",
+//                             fontSize: "18vw",
+//                             fontWeight: "200",
+//                             lineHeight: "108%",
+//                             marginInline: "4vw",
+//                             marginBottom: "4vw",
+//                             letterSpacing: "0.24em",
+//                             color: "#0000",
+//                             // background: '#aed'
+//                             // textTransform: "uppercase",
+//                         }}
+//                     >
+//                         01
+//                     </div>
+//                     <div
+//                         style={{
+//                             width: "100%",
+//                             fontSize: "9vw",
+//                             fontWeight: "900",
+//                             lineHeight: "108%",
+//                             marginInline: "4vw",
+//                             // marginBottom: "2vw",
+//                             // textTransform: "uppercase",
+//                         }}
+//                     >
+//                         Rich Volcanic Soil
+//                     </div>
+//                     <div
+//                         style={{
+//                             MaxWidth: "100%",
+//                             fontSize: "4.5vw",
+//                             fontWeight: "400",
+//                             lineHeight: "124%",
+//                             marginTop: "8vw",
+//                             letterSpacing: "0.01em",
+//                             marginInline: "4vw",
+//                             color: "#0000",
+//                             // textTransform: "uppercase",
+//                         }}
+//                     >
+//                         Nurtured from the Depths of the Earth The soil, enriched
+//                         by the volcanic ash, teems with rare nutrients that
+//                         nourish and sustain. Teems with rare nutrients that
+//                         nourish and sustain.
+//                     </div>
+//                     <div
+//                         style={{
+//                             marginInline: "4vw",
+//                             fontSize: "7vw",
+//                             fontWeight: "400",
+//                             lineHeight: "124%",
+//                             marginTop: "6vw",
+//                             letterSpacing: "0.01em",
+//                             textAlign: "end",
+//                             color: "#0000",
+//                             // textTransform: "uppercase",
+//                         }}
+//                     >
+//                         {"Learn More --->"}
+//                     </div>
+//                 </div>
+//             </ParallaxDiv>
+//             <ParallaxDiv
+//                 marginTop={"100vw"}
+//                 scrollSpeed={0.24}
+//                 fadeInThreshold={140}
+//                 fadeOutThreshold={700}
+//             >
+//                 <div
+//                     style={{
+//                         position: "absolute",
+//                         top: "5vw",
+//                         display: "flex",
+//                         flexDirection: "column",
+//                         // background: "#ffffff",
+//                         // borderRadius: '4vw',
+//                         paddingBlock: "6vw",
+//                         width: "100vw",
+//                         color: "#343443",
+//                     }}
+//                 >
+//                     <div
+//                         style={{
+//                             width: "100%",
+//                             fontSize: "18vw",
+//                             fontWeight: "200",
+//                             lineHeight: "108%",
+//                             marginInline: "4vw",
+//                             marginBottom: "4vw",
+//                             letterSpacing: "0.24em",
+//                             color: "#0000",
+//                             // textTransform: "uppercase",
+//                         }}
+//                     >
+//                         01
+//                     </div>
+//                     <div
+//                         style={{
+//                             width: "100%",
+//                             fontSize: "9vw",
+//                             fontWeight: "900",
+//                             lineHeight: "108%",
+//                             marginInline: "4vw",
+//                             color: "#0000",
+//                             // marginBottom: "2vw",
+//                             // textTransform: "uppercase",
+//                         }}
+//                     >
+//                         Rich Volcanic Soil
+//                     </div>
+//                     <div
+//                         style={{
+//                             MaxWidth: "100%",
+//                             fontSize: "4.5vw",
+//                             fontWeight: "400",
+//                             lineHeight: "124%",
+//                             marginTop: "8vw",
+//                             letterSpacing: "0.01em",
+//                             marginInline: "4vw",
+//                             // textTransform: "uppercase",
+//                         }}
+//                     >
+//                         Nurtured from the Depths of the Earth The soil, enriched
+//                         by the volcanic ash, teems with rare nutrients that
+//                         nourish and sustain. Teems with rare nutrients that
+//                         nourish and sustain.
+//                     </div>
+//                     <div
+//                         style={{
+//                             marginInline: "4vw",
+//                             fontSize: "7vw",
+//                             fontWeight: "400",
+//                             lineHeight: "124%",
+//                             marginTop: "6vw",
+//                             letterSpacing: "0.01em",
+//                             textAlign: "end",
+//                             color: "#0000",
+//                             // textTransform: "uppercase",
+//                         }}
+//                     >
+//                         {"Learn More --->"}
+//                     </div>
+//                 </div>
+//             </ParallaxDiv>
+//             <ParallaxDiv
+//                 marginTop={"100vw"}
+//                 scrollSpeed={0.24}
+//                 fadeInThreshold={140}
+//                 fadeOutThreshold={700}
+//             >
+//                 <div
+//                     style={{
+//                         position: "absolute",
+//                         top: "5vw",
+//                         display: "flex",
+//                         flexDirection: "column",
+//                         // background: "#ffffff",
+//                         // borderRadius: '4vw',
+//                         paddingBlock: "6vw",
+//                         width: "100vw",
+//                         color: "#343443",
+//                     }}
+//                 >
+//                     <div
+//                         style={{
+//                             width: "100%",
+//                             fontSize: "18vw",
+//                             fontWeight: "200",
+//                             lineHeight: "108%",
+//                             marginInline: "4vw",
+//                             marginBottom: "4vw",
+//                             letterSpacing: "0.24em",
+//                             color: "#0000",
+//                             // textTransform: "uppercase",
+//                         }}
+//                     >
+//                         01
+//                     </div>
+//                     <div
+//                         style={{
+//                             width: "100%",
+//                             fontSize: "9vw",
+//                             fontWeight: "900",
+//                             lineHeight: "108%",
+//                             marginInline: "4vw",
+//                             color: "#0000",
+//                             // marginBottom: "2vw",
+//                             // textTransform: "uppercase",
+//                         }}
+//                     >
+//                         Rich Volcanic Soil
+//                     </div>
+//                     <div
+//                         style={{
+//                             MaxWidth: "100%",
+//                             fontSize: "4.5vw",
+//                             fontWeight: "400",
+//                             lineHeight: "124%",
+//                             marginTop: "8vw",
+//                             letterSpacing: "0.01em",
+//                             marginInline: "4vw",
+//                             color: "#0000",
+//                             // textTransform: "uppercase",
+//                         }}
+//                     >
+//                         Nurtured from the Depths of the Earth The soil, enriched
+//                         by the volcanic ash, teems with rare nutrients that
+//                         nourish and sustain. Teems with rare nutrients that
+//                         nourish and sustain.
+//                     </div>
+//                     <div
+//                         style={{
+//                             marginInline: "4vw",
+//                             fontSize: "7vw",
+//                             fontWeight: "400",
+//                             lineHeight: "124%",
+//                             marginTop: "6vw",
+//                             letterSpacing: "0.01em",
+//                             textAlign: "end",
+//                             // textTransform: "uppercase",
+//                         }}
+//                     >
+//                         {"Learn More --->"}
+//                     </div>
+//                 </div>
+//             </ParallaxDiv> */}
+
+//             <ParallaxDiv marginTop={"275vw"} scrollSpeed={0.7}>
+//                 <div
+//                     style={{
+//                         position: "relative",
+//                         width: "100vw",
+//                         height: "100vw",
+//                     }}
+//                 >
+//                     <Image
+//                         src="/hills 2b.png"
+//                         alt="sky"
+//                         fill
+//                         sizes="100vw"
+//                         priority
+//                         style={{
+//                             objectFit: "cover",
+//                         }}
+//                     />
+//                 </div>
+//             </ParallaxDiv>
+
+//             {/* <ParallaxDiv marginTop={"200vw"} scrollSpeed={0.2}>
+//                 <div
+//                     style={{
+//                         position: "relative",
+//                         width: "100vw",
+//                         height: "170vw",
+//                     }}
+//                 >
+//                     <Image
+//                         src="/farm3.png"
+//                         alt="sky"
+//                         fill
+//                         sizes="100vw"
+//                         priority
+//                         style={{
+//                             objectFit: "cover",
+//                         }}
+//                     />
+//                 </div>
+//             </ParallaxDiv> */}
+//             {/* <ParallaxDiv marginTop={"350vw"} scrollSpeed={0.5}>
+//                 <div
+//                     style={{
+//                         position: "relative",
+//                         width: "100vw",
+//                         height: "150vw",
+//                     }}
+//                 >
+//                     <Image
+//                         src="/trees2.png"
+//                         alt="sky"
+//                         fill
+//                         sizes="100vw"
+//                         priority
+//                         style={{
+//                             objectFit: "cover",
+//                         }}
+//                     />
+//                 </div>
+//             </ParallaxDiv> */}
+//             <ParallaxDiv marginTop={"280vw"} scrollSpeed={0.83}>
+//                 <div
+//                     style={{
+//                         position: "relative",
+//                         width: "100vw",
+//                         height: "200vw",
+//                     }}
+//                 >
+//                     <Image
+//                         src="/foliage10.png"
+//                         alt="sky"
+//                         fill
+//                         sizes="100vw"
+//                         priority
+//                         style={{
+//                             objectFit: "cover",
+//                         }}
+//                     />
+//                 </div>
+//             </ParallaxDiv>
+
+//             <ParallaxDiv marginTop={"340vw"} scrollSpeed={0.20}>
+//                 <div
+//                     style={{
+//                         position: "relative",
+//                         width: "100vw",
+//                         height: "200vw",
+//                     }}
+//                 >
+//                     <Image
+//                         src="/background2.png"
+//                         alt="sky"
+//                         fill
+//                         sizes="100vw"
+//                         priority
+//                         style={{
+//                             objectFit: "cover",
+//                         }}
+//                     />
+//                 </div>
+//             </ParallaxDiv>
+
+//             {/* <ParallaxDiv marginTop={"420vw"} scrollSpeed={0.8}>
+//                 <div
+//                     style={{
+//                         position: "relative",
+//                         width: "100vw",
+//                         height: "200vw",
+//                     }}
+//                 >
+//                     <Image
+//                         src="/tree bottoms.png"
+//                         alt="sky"
+//                         fill
+//                         sizes="100vw"
+//                         priority
+//                         style={{
+//                             objectFit: "cover",
+//                         }}
+//                     />
+//                 </div>
+//             </ParallaxDiv> */}
+
+//             <ParallaxDiv marginTop={"440vw"} scrollSpeed={0.30}>
+//                 <div
+//                     style={{
+//                         position: "relative",
+//                         width: "100vw",
+//                         height: "300vw",
+//                     }}
+//                 >
+//                     <Image
+//                         src="/trees4.png"
+//                         alt="sky"
+//                         fill
+//                         sizes="100vw"
+//                         priority
+//                         style={{
+//                             objectFit: "cover",
+//                         }}
+//                     />
+//                 </div>
+//             </ParallaxDiv>
+
+//             <ParallaxDiv marginTop={"500vw"} scrollSpeed={0.36}>
+//                 <div
+//                     style={{
+//                         position: "relative",
+//                         width: "100vw",
+//                         height: "200vw",
+//                     }}
+//                 >
+//                     <Image
+//                         src="/treetop2.png"
+//                         alt="sky"
+//                         fill
+//                         sizes="100vw"
+//                         priority
+//                         style={{
+//                             objectFit: "cover",
+//                         }}
+//                     />
+//                 </div>
+//             </ParallaxDiv>
+
+//             <ParallaxDiv marginTop={"400vw"} scrollSpeed={0.6}>
+//                 <div
+//                     style={{
+//                         position: "relative",
+//                         width: "100vw",
+//                         height: "200vw",
+//                     }}
+//                 >
+//                     <Image
+//                         src="/trunks1.png"
+//                         alt="sky"
+//                         fill
+//                         sizes="100vw"
+//                         priority
+//                         style={{
+//                             objectFit: "cover",
+//                         }}
+//                     />
+//                 </div>
+//             </ParallaxDiv>
+
+//             <ParallaxDiv marginTop={"440vw"} scrollSpeed={0.8}>
+//                 <div
+//                     style={{
+//                         position: "relative",
+//                         width: "100vw",
+//                         height: "100vw",
+//                     }}
+//                 >
+//                     <Image
+//                         src="/foliage bottom 3.png"
+//                         alt="sky"
+//                         fill
+//                         sizes="100vw"
+//                         priority
+//                         style={{
+//                             objectFit: "cover",
+//                         }}
+//                     />
+//                 </div>
+//             </ParallaxDiv>
+//             <ParallaxDiv marginTop={"520vw"} scrollSpeed={0.5}>
+//                 <div
+//                     style={{
+//                         position: "relative",
+//                         width: "100vw",
+//                         height: "200vw",
+//                     }}
+//                 >
+//                     <Image
+//                         src="/foliage3.png"
+//                         alt="sky"
+//                         fill
+//                         sizes="100vw"
+//                         priority
+//                         style={{
+//                             objectFit: "cover",
+//                         }}
+//                     />
+//                 </div>
+//             </ParallaxDiv>
+//             <ParallaxDiv marginTop={"660vw"} scrollSpeed={0.6}>
+//                 <div
+//                     style={{
+//                         position: "relative",
+//                         width: "100vw",
+//                         height: "200vw",
+//                     }}
+//                 >
+//                     <Image
+//                         src="/foliage2.png"
+//                         alt="sky"
+//                         fill
+//                         sizes="100vw"
+//                         priority
+//                         style={{
+//                             objectFit: "cover",
+//                         }}
+//                     />
+//                 </div>
+//             </ParallaxDiv>
+
+//             <ParallaxDiv marginTop={"390vw"} scrollSpeed={1}>
+//                 <div
+//                     style={{
+//                         position: "relative",
+//                         width: "100vw",
+//                         height: "200vw",
+//                     }}
+//                 >
+//                     <Image
+//                         src="/foliage11.png"
+//                         alt="sky"
+//                         fill
+//                         sizes="100vw"
+//                         priority
+//                         style={{
+//                             objectFit: "cover",
+//                         }}
+//                     />
+//                 </div>
+//             </ParallaxDiv>
+
+//             <ParallaxDiv
+//                 marginTop={"780vw"}
+//                 scrollSpeed={0.7}
+//                 fadeInThreshold={930}
+//                 fadeOutThreshold={1300}
+//             >
+//                 <div
+//                     style={{
+//                         position: "absolute",
+//                         top: "5vw",
+//                         display: "flex",
+//                         flexDirection: "column",
+//                         // background: "#ffffff",
+//                         // borderRadius: '4vw',
+//                         paddingBlock: "6vw",
+//                         width: "100vw",
+//                         color: "white",
+//                     }}
+//                 >
+//                     <div
+//                         style={{
+//                             width: "100%",
+//                             fontSize: "18vw",
+//                             fontWeight: "200",
+//                             lineHeight: "108%",
+//                             marginInline: "4vw",
+//                             marginBottom: "4vw",
+//                             letterSpacing: "0.24em",
+//                             // textTransform: "uppercase",
+//                         }}
+//                     >
+//                         02
+//                     </div>
+//                 </div>
+//             </ParallaxDiv>
+//             <ParallaxDiv
+//                 marginTop={"780vw"}
+//                 scrollSpeed={0.7}
+//                 fadeInThreshold={935}
+//                 fadeOutThreshold={1300}
+//             >
+//                 <div
+//                     style={{
+//                         position: "absolute",
+//                         top: "5vw",
+//                         display: "flex",
+//                         flexDirection: "column",
+//                         // background: "#ffffff",
+//                         // borderRadius: '4vw',
+//                         paddingBlock: "6vw",
+//                         width: "100vw",
+//                         color: "white",
+//                     }}
+//                 >
+//                     <div
+//                         style={{
+//                             width: "100%",
+//                             fontSize: "18vw",
+//                             fontWeight: "200",
+//                             lineHeight: "108%",
+//                             marginInline: "4vw",
+//                             marginBottom: "4vw",
+//                             letterSpacing: "0.24em",
+//                             color: "#0000",
+//                             // textTransform: "uppercase",
+//                         }}
+//                     >
+//                         01
+//                     </div>
+//                     <div
+//                         style={{
+//                             width: "100%",
+//                             fontSize: "9vw",
+//                             fontWeight: "900",
+//                             lineHeight: "108%",
+//                             marginInline: "4vw",
+//                             // marginBottom: "2vw",
+//                             // textTransform: "uppercase",
+//                         }}
+//                     >
+//                         Lush Rain Forests
+//                     </div>
+//                     {/* <div
+//                         style={{
+//                             height: "4vw",
+//                         }}
+//                     >
+//                         <Line color="#343443"></Line>
+//                     </div> */}
+//                     <div
+//                         style={{
+//                             MaxWidth: "100%",
+//                             fontSize: "4.5vw",
+//                             fontWeight: "400",
+//                             lineHeight: "124%",
+//                             marginTop: "8vw",
+//                             letterSpacing: "0.01em",
+//                             marginInline: "4vw",
+//                             color: "#0000",
+//                             // textTransform: "uppercase",
+//                         }}
+//                     >
+//                         Nurtured from the Depths of the Earth The soil, enriched
+//                         by the volcanic ash, teems with rare nutrients that
+//                         nourish and sustain. Teems with rare nutrients that
+//                         nourish and sustain.
+//                     </div>
+//                     <div
+//                         style={{
+//                             marginInline: "4vw",
+//                             fontSize: "7vw",
+//                             fontWeight: "400",
+//                             lineHeight: "124%",
+//                             marginTop: "6vw",
+//                             letterSpacing: "0.01em",
+//                             textAlign: "end",
+//                             color: "#0000",
+//                             // textTransform: "uppercase",
+//                         }}
+//                     >
+//                         {"Learn More --->"}
+//                     </div>
+//                 </div>
+//             </ParallaxDiv>
+//             <ParallaxDiv
+//                 marginTop={"780vw"}
+//                 scrollSpeed={0.7}
+//                 fadeInThreshold={940}
+//                 fadeOutThreshold={1300}
+//             >
+//                 <div
+//                     style={{
+//                         position: "absolute",
+//                         top: "5vw",
+//                         display: "flex",
+//                         flexDirection: "column",
+//                         // background: "#ffffff",
+//                         // borderRadius: '4vw',
+//                         paddingBlock: "6vw",
+//                         width: "100vw",
+//                         color: "white",
+//                     }}
+//                 >
+//                     <div
+//                         style={{
+//                             width: "100%",
+//                             fontSize: "18vw",
+//                             fontWeight: "200",
+//                             lineHeight: "108%",
+//                             marginInline: "4vw",
+//                             marginBottom: "4vw",
+//                             letterSpacing: "0.24em",
+//                             color: "#0000",
+//                             // textTransform: "uppercase",
+//                         }}
+//                     >
+//                         01
+//                     </div>
+//                     <div
+//                         style={{
+//                             width: "100%",
+//                             fontSize: "9vw",
+//                             fontWeight: "900",
+//                             lineHeight: "108%",
+//                             marginInline: "4vw",
+//                             color: "#0000",
+//                             // marginBottom: "2vw",
+//                             // textTransform: "uppercase",
+//                         }}
+//                     >
+//                         Rich Volcanic Soil
+//                     </div>
+//                     {/* <div
+//                         style={{
+//                             height: "4vw",
+//                         }}
+//                     >
+//                         <Line color="#343443"></Line>
+//                     </div> */}
+//                     <div
+//                         style={{
+//                             MaxWidth: "100%",
+//                             fontSize: "4.5vw",
+//                             fontWeight: "400",
+//                             lineHeight: "124%",
+//                             marginTop: "8vw",
+//                             letterSpacing: "0.01em",
+//                             marginInline: "4vw",
+//                             // textTransform: "uppercase",
+//                         }}
+//                     >
+//                         Nurtured from the Depths of the Earth The soil, enriched
+//                         by the volcanic ash, teems with rare nutrients that
+//                         nourish and sustain. Teems with rare nutrients that
+//                         nourish and sustain.
+//                     </div>
+//                     <div
+//                         style={{
+//                             marginInline: "4vw",
+//                             fontSize: "7vw",
+//                             fontWeight: "400",
+//                             lineHeight: "124%",
+//                             marginTop: "6vw",
+//                             letterSpacing: "0.01em",
+//                             textAlign: "end",
+//                             color: "#0000",
+//                             // textTransform: "uppercase",
+//                         }}
+//                     >
+//                         {"Learn More --->"}
+//                     </div>
+//                 </div>
+//             </ParallaxDiv>
+//             <ParallaxDiv
+//                 marginTop={"780vw"}
+//                 scrollSpeed={0.7}
+//                 fadeInThreshold={940}
+//                 fadeOutThreshold={1300}
+//             >
+//                 <div
+//                     style={{
+//                         position: "absolute",
+//                         top: "5vw",
+//                         display: "flex",
+//                         flexDirection: "column",
+//                         // background: "#ffffff",
+//                         // borderRadius: '4vw',
+//                         paddingBlock: "6vw",
+//                         width: "100vw",
+//                         color: "white",
+//                     }}
+//                 >
+//                     <div
+//                         style={{
+//                             width: "100%",
+//                             fontSize: "18vw",
+//                             fontWeight: "200",
+//                             lineHeight: "108%",
+//                             marginInline: "4vw",
+//                             marginBottom: "4vw",
+//                             letterSpacing: "0.24em",
+//                             color: "#0000",
+//                             // textTransform: "uppercase",
+//                         }}
+//                     >
+//                         01
+//                     </div>
+//                     <div
+//                         style={{
+//                             width: "100%",
+//                             fontSize: "9vw",
+//                             fontWeight: "900",
+//                             lineHeight: "108%",
+//                             marginInline: "4vw",
+//                             color: "#0000",
+//                             // marginBottom: "2vw",
+//                             // textTransform: "uppercase",
+//                         }}
+//                     >
+//                         Rich Volcanic Soil
+//                     </div>
+//                     {/* <div
+//                         style={{
+//                             height: "4vw",
+//                         }}
+//                     >
+//                         <Line color="#343443"></Line>
+//                     </div> */}
+//                     <div
+//                         style={{
+//                             MaxWidth: "100%",
+//                             fontSize: "4.5vw",
+//                             fontWeight: "400",
+//                             lineHeight: "124%",
+//                             marginTop: "8vw",
+//                             letterSpacing: "0.01em",
+//                             marginInline: "4vw",
+//                             color: "#0000",
+//                             // textTransform: "uppercase",
+//                         }}
+//                     >
+//                         Nurtured from the Depths of the Earth The soil, enriched
+//                         by the volcanic ash, teems with rare nutrients that
+//                         nourish and sustain. Teems with rare nutrients that
+//                         nourish and sustain.
+//                     </div>
+//                     <div
+//                         style={{
+//                             marginInline: "4vw",
+//                             fontSize: "7vw",
+//                             fontWeight: "400",
+//                             lineHeight: "124%",
+//                             marginTop: "6vw",
+//                             letterSpacing: "0.01em",
+//                             textAlign: "end",
+//                             // textTransform: "uppercase",
+//                         }}
+//                     >
+//                         {"Learn More --->"}
+//                     </div>
+//                 </div>
+//             </ParallaxDiv>
+
+//             <ParallaxDiv marginTop={"860vw"} scrollSpeed={0.7}>
+//                 <div
+//                     style={{
+//                         position: "relative",
+//                         width: "100vw",
+//                         height: "400vw",
+//                     }}
+//                 >
+//                     <Image
+//                         src="/bean.png"
+//                         alt="sky"
+//                         fill
+//                         sizes="100vw"
+//                         priority
+//                         style={{
+//                             objectFit: "cover",
+//                         }}
+//                     />
+//                 </div>
+//             </ParallaxDiv>
+
+//             <ParallaxDiv marginTop={"1800vw"} scrollSpeed={1}>
+//                 <div
+//                     style={{
+//                         position: "relative",
+//                         width: "100vw",
+//                         height: "400vw",
+//                         background: '#add',
+//                     }}
+//                 >
+//                 </div>
+//             </ParallaxDiv>
+
+//         </div>
+//     );
+// };
+
+// export default ParallaxPage;
+
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import ParallaxDiv from "./ParallaxDiv";
@@ -423,71 +1489,49 @@ const ParallaxPage = () => {
                 overflow: "hidden",
             }}
         >
-            <ParallaxDiv marginTop={"0vw"} scrollSpeed={0.2}>
-                <div
-                    style={{
-                        position: "relative",
-                        width: "100vw",
-                        height: "700vw",
-                    }}
-                >
-                    <Image
-                        src="/sky.png"
-                        alt="sky"
-                        fill
-                        sizes="100vw"
-                        priority
-                        style={{
-                            objectFit: "cover",
-                        }}
-                    />
-                </div>
-            </ParallaxDiv>
-            <ParallaxDiv marginTop={"60vw"} scrollSpeed={0.24}>
-                <div
-                    style={{
-                        position: "relative",
-                        width: "100vw",
-                        height: "517vw",
-                    }}
-                >
-                    <Image
-                        src="/volcano.png"
-                        alt="sky"
-                        fill
-                        sizes="100vw"
-                        priority
-                        style={{
-                            objectFit: "cover",
-                        }}
-                    />
-                </div>
-            </ParallaxDiv>
-            <ParallaxDiv marginTop={"80vw"} scrollSpeed={0.3}>
-                <div
-                    style={{
-                        position: "relative",
-                        width: "100vw",
-                        height: "517vw",
-                    }}
-                >
-                    <Image
-                        src="/hills.png"
-                        alt="sky"
-                        fill
-                        sizes="100vw"
-                        priority
-                        style={{
-                            objectFit: "cover",
-                        }}
-                    />
-                </div>
-            </ParallaxDiv>
+            <ParallaxImage
+                marginTop={"0vw"}
+                scrollSpeed={0.4}
+                src="/sky x2.png"
+                height="260vw"
+            />
+            <ParallaxImage
+                marginTop={"190vw"}
+                scrollSpeed={0.5}
+                src="/volcano x2.png"
+                height="100vw"
+            />
+            <ParallaxImage
+                marginTop={"270vw"}
+                scrollSpeed={0.6}
+                src="/hills x4.png"
+                height="100vw"
+            />
+            <ParallaxImage
+                marginTop={"330vw"}
+                scrollSpeed={0.7}
+                src="/hills 2 x3.png"
+                height="100vw"
+            />
+            <ParallaxImage
+                marginTop={"370vw"}
+                scrollSpeed={0.8}
+                src="/foliage x7.png"
+                height="300vw"
+            />
+
+            <ParallaxImage
+                marginTop={"400vw"}
+                scrollSpeed={0.9}
+                src="/foliage 2 x2.png"
+                height="300vw"
+            />
+
             <ParallaxDiv
                 marginTop={"60vw"}
-                scrollSpeed={0.7}
+                scrollSpeed={1}
                 fadeInThreshold={-100}
-                fadeOutThreshold={10}
+                fadeOutThreshold={20}
             >
                 <div
                     style={{
@@ -525,799 +1569,77 @@ const ParallaxPage = () => {
                     </div>
                 </div>
             </ParallaxDiv>
-            <ParallaxDiv
-                marginTop={"100vw"}
-                scrollSpeed={0.24}
-                fadeInThreshold={130}
-                fadeOutThreshold={700}
-            >
-                <div
-                    style={{
-                        position: "absolute",
-                        top: "5vw",
-                        display: "flex",
-                        flexDirection: "column",
-                        // background: "#ffffff",
-                        // borderRadius: '4vw',
-                        paddingBlock: "6vw",
-                        width: "100vw",
-                        color: "#343443",
-                    }}
-                >
-                    <div
-                        style={{
-                            width: "100%",
-                            fontSize: "18vw",
-                            fontWeight: "200",
-                            lineHeight: "108%",
-                            marginInline: "4vw",
-                            marginBottom: "4vw",
-                            letterSpacing: "0.24em",
-                            // textTransform: "uppercase",
-                        }}
-                    >
-                        01
-                    </div>
-                </div>
-            </ParallaxDiv>
-            <ParallaxDiv
-                marginTop={"100vw"}
-                scrollSpeed={0.24}
-                fadeInThreshold={135}
-                fadeOutThreshold={700}
-            >
-                <div
-                    style={{
-                        position: "absolute",
-                        top: "5vw",
-                        display: "flex",
-                        flexDirection: "column",
-                        // background: "#ffffff",
-                        // borderRadius: '4vw',
-                        paddingBlock: "6vw",
-                        width: "100vw",
-                        color: "#343443",
-                    }}
-                >
-                    <div
-                        style={{
-                            width: "100%",
-                            fontSize: "18vw",
-                            fontWeight: "200",
-                            lineHeight: "108%",
-                            marginInline: "4vw",
-                            marginBottom: "4vw",
-                            letterSpacing: "0.24em",
-                            color: "#0000",
-                            // textTransform: "uppercase",
-                        }}
-                    >
-                        01
-                    </div>
-                    <div
-                        style={{
-                            width: "100%",
-                            fontSize: "9vw",
-                            fontWeight: "900",
-                            lineHeight: "108%",
-                            marginInline: "4vw",
-                            // marginBottom: "2vw",
-                            // textTransform: "uppercase",
-                        }}
-                    >
-                        Rich Volcanic Soil
-                    </div>
-                    {/* <div
-                        style={{
-                            height: "4vw",
-                        }}
-                    >
-                        <Line color="#343443"></Line>
-                    </div> */}
-                    <div
-                        style={{
-                            MaxWidth: "100%",
-                            fontSize: "4.5vw",
-                            fontWeight: "400",
-                            lineHeight: "124%",
-                            marginTop: "8vw",
-                            letterSpacing: "0.01em",
-                            marginInline: "4vw",
-                            color: "#0000",
-                            // textTransform: "uppercase",
-                        }}
-                    >
-                        Nurtured from the Depths of the Earth The soil, enriched
-                        by the volcanic ash, teems with rare nutrients that
-                        nourish and sustain. Teems with rare nutrients that
-                        nourish and sustain.
-                    </div>
-                    <div
-                        style={{
-                            marginInline: "4vw",
-                            fontSize: "7vw",
-                            fontWeight: "400",
-                            lineHeight: "124%",
-                            marginTop: "6vw",
-                            letterSpacing: "0.01em",
-                            textAlign: "end",
-                            color: "#0000",
-                            // textTransform: "uppercase",
-                        }}
-                    >
-                        {"Learn More --->"}
-                    </div>
-                </div>
-            </ParallaxDiv>
-            <ParallaxDiv
-                marginTop={"100vw"}
-                scrollSpeed={0.24}
-                fadeInThreshold={140}
-                fadeOutThreshold={700}
-            >
-                <div
-                    style={{
-                        position: "absolute",
-                        top: "5vw",
-                        display: "flex",
-                        flexDirection: "column",
-                        // background: "#ffffff",
-                        // borderRadius: '4vw',
-                        paddingBlock: "6vw",
-                        width: "100vw",
-                        color: "#343443",
-                    }}
-                >
-                    <div
-                        style={{
-                            width: "100%",
-                            fontSize: "18vw",
-                            fontWeight: "200",
-                            lineHeight: "108%",
-                            marginInline: "4vw",
-                            marginBottom: "4vw",
-                            letterSpacing: "0.24em",
-                            color: "#0000",
-                            // textTransform: "uppercase",
-                        }}
-                    >
-                        01
-                    </div>
-                    <div
-                        style={{
-                            width: "100%",
-                            fontSize: "9vw",
-                            fontWeight: "900",
-                            lineHeight: "108%",
-                            marginInline: "4vw",
-                            color: "#0000",
-                            // marginBottom: "2vw",
-                            // textTransform: "uppercase",
-                        }}
-                    >
-                        Rich Volcanic Soil
-                    </div>
-                    {/* <div
-                        style={{
-                            height: "4vw",
-                        }}
-                    >
-                        <Line color="#343443"></Line>
-                    </div> */}
-                    <div
-                        style={{
-                            MaxWidth: "100%",
-                            fontSize: "4.5vw",
-                            fontWeight: "400",
-                            lineHeight: "124%",
-                            marginTop: "8vw",
-                            letterSpacing: "0.01em",
-                            marginInline: "4vw",
-                            // textTransform: "uppercase",
-                        }}
-                    >
-                        Nurtured from the Depths of the Earth The soil, enriched
-                        by the volcanic ash, teems with rare nutrients that
-                        nourish and sustain. Teems with rare nutrients that
-                        nourish and sustain.
-                    </div>
-                    <div
-                        style={{
-                            marginInline: "4vw",
-                            fontSize: "7vw",
-                            fontWeight: "400",
-                            lineHeight: "124%",
-                            marginTop: "6vw",
-                            letterSpacing: "0.01em",
-                            textAlign: "end",
-                            color: "#0000",
-                            // textTransform: "uppercase",
-                        }}
-                    >
-                        {"Learn More --->"}
-                    </div>
-                </div>
-            </ParallaxDiv>
-            <ParallaxDiv
-                marginTop={"100vw"}
-                scrollSpeed={0.24}
-                fadeInThreshold={140}
-                fadeOutThreshold={700}
-            >
-                <div
-                    style={{
-                        position: "absolute",
-                        top: "5vw",
-                        display: "flex",
-                        flexDirection: "column",
-                        // background: "#ffffff",
-                        // borderRadius: '4vw',
-                        paddingBlock: "6vw",
-                        width: "100vw",
-                        color: "#343443",
-                    }}
-                >
-                    <div
-                        style={{
-                            width: "100%",
-                            fontSize: "18vw",
-                            fontWeight: "200",
-                            lineHeight: "108%",
-                            marginInline: "4vw",
-                            marginBottom: "4vw",
-                            letterSpacing: "0.24em",
-                            color: "#0000",
-                            // textTransform: "uppercase",
-                        }}
-                    >
-                        01
-                    </div>
-                    <div
-                        style={{
-                            width: "100%",
-                            fontSize: "9vw",
-                            fontWeight: "900",
-                            lineHeight: "108%",
-                            marginInline: "4vw",
-                            color: "#0000",
-                            // marginBottom: "2vw",
-                            // textTransform: "uppercase",
-                        }}
-                    >
-                        Rich Volcanic Soil
-                    </div>
-                    {/* <div
-                        style={{
-                            height: "4vw",
-                        }}
-                    >
-                        <Line color="#343443"></Line>
-                    </div> */}
-                    <div
-                        style={{
-                            MaxWidth: "100%",
-                            fontSize: "4.5vw",
-                            fontWeight: "400",
-                            lineHeight: "124%",
-                            marginTop: "8vw",
-                            letterSpacing: "0.01em",
-                            marginInline: "4vw",
-                            color: "#0000",
-                            // textTransform: "uppercase",
-                        }}
-                    >
-                        Nurtured from the Depths of the Earth The soil, enriched
-                        by the volcanic ash, teems with rare nutrients that
-                        nourish and sustain. Teems with rare nutrients that
-                        nourish and sustain.
-                    </div>
-                    <div
-                        style={{
-                            marginInline: "4vw",
-                            fontSize: "7vw",
-                            fontWeight: "400",
-                            lineHeight: "124%",
-                            marginTop: "6vw",
-                            letterSpacing: "0.01em",
-                            textAlign: "end",
-                            // textTransform: "uppercase",
-                        }}
-                    >
-                        {"Learn More --->"}
-                    </div>
-                </div>
-            </ParallaxDiv>
- 
-            <ParallaxDiv marginTop={"350vw"} scrollSpeed={0.36}>
-                <div
-                    style={{
-                        position: "relative",
-                        width: "100vw",
-                        height: "100vw",
-                    }}
-                >
-                    <Image
-                        src="/hills 2b.png"
-                        alt="sky"
-                        fill
-                        sizes="100vw"
-                        priority
-                        style={{
-                            objectFit: "cover",
-                        }}
-                    />
-                </div>
-            </ParallaxDiv>
-            {/* <ParallaxDiv marginTop={"200vw"} scrollSpeed={0.2}>
-                <div
-                    style={{
-                        position: "relative",
-                        width: "100vw",
-                        height: "170vw",
-                    }}
-                >
-                    <Image
-                        src="/farm3.png"
-                        alt="sky"
-                        fill
-                        sizes="100vw"
-                        priority
-                        style={{
-                            objectFit: "cover",
-                        }}
-                    />
-                </div>
-            </ParallaxDiv> */}
-            {/* <ParallaxDiv marginTop={"350vw"} scrollSpeed={0.5}>
-                <div
-                    style={{
-                        position: "relative",
-                        width: "100vw",
-                        height: "150vw",
-                    }}
-                >
-                    <Image
-                        src="/trees2.png"
-                        alt="sky"
-                        fill
-                        sizes="100vw"
-                        priority
-                        style={{
-                            objectFit: "cover",
-                        }}
-                    />
-                </div>
-            </ParallaxDiv> */}
-            <ParallaxDiv marginTop={"500vw"} scrollSpeed={0.5}>
-                <div
-                    style={{
-                        position: "relative",
-                        width: "100vw",
-                        height: "200vw",
-                    }}
-                >
-                    <Image
-                        src="/foliage.png"
-                        alt="sky"
-                        fill
-                        sizes="100vw"
-                        priority
-                        style={{
-                            objectFit: "cover",
-                        }}
-                    />
-                </div>
-            </ParallaxDiv>
 
-
-            <ParallaxDiv marginTop={"490vw"} scrollSpeed={0.30}>
-                <div
-                    style={{
-                        position: "relative",
-                        width: "100vw",
-                        height: "200vw",
-                    }}
-                >
-                    <Image
-                        src="/tree.png"
-                        alt="sky"
-                        fill
-                        sizes="100vw"
-                        priority
-                        style={{
-                            objectFit: "cover",
-                        }}
-                    />
-                </div>
-            </ParallaxDiv>
-
-            <ParallaxDiv marginTop={"500vw"} scrollSpeed={0.36}>
-                <div
-                    style={{
-                        position: "relative",
-                        width: "100vw",
-                        height: "200vw",
-                    }}
-                >
-                    <Image
-                        src="/treetop.png"
-                        alt="sky"
-                        fill
-                        sizes="100vw"
-                        priority
-                        style={{
-                            objectFit: "cover",
-                        }}
-                    />
-                </div>
-            </ParallaxDiv>
-            <ParallaxDiv marginTop={"520vw"} scrollSpeed={0.5}>
-                <div
-                    style={{
-                        position: "relative",
-                        width: "100vw",
-                        height: "200vw",
-                    }}
-                >
-                    <Image
-                        src="/foliage3.png"
-                        alt="sky"
-                        fill
-                        sizes="100vw"
-                        priority
-                        style={{
-                            objectFit: "cover",
-                        }}
-                    />
-                </div>
-            </ParallaxDiv>
-            <ParallaxDiv marginTop={"660vw"} scrollSpeed={0.6}>
-                <div
-                    style={{
-                        position: "relative",
-                        width: "100vw",
-                        height: "200vw",
-                    }}
-                >
-                    <Image
-                        src="/foliage2.png"
-                        alt="sky"
-                        fill
-                        sizes="100vw"
-                        priority
-                        style={{
-                            objectFit: "cover",
-                        }}
-                    />
-                </div>
-            </ParallaxDiv>
-        
             <ParallaxDiv
-                marginTop={"780vw"}
-                scrollSpeed={0.7}
-                fadeInThreshold={930}
-                fadeOutThreshold={1300}
+                marginTop={"180vw"}
+                scrollSpeed={0.6}
+                // fadeInThreshold={70}
+                // fadeOutThreshold={250}
             >
                 <div
                     style={{
-                        position: "absolute",
-                        top: "5vw",
-                        display: "flex",
-                        flexDirection: "column",
-                        // background: "#ffffff",
-                        // borderRadius: '4vw',
-                        paddingBlock: "6vw",
-                        width: "100vw",
-                        color: "white",
+                        // width: "100%",
+                        fontSize: "11vw",
+                        fontWeight: "900",
+                        lineHeight: "120%",
+                        marginInline: "8vw",
+                        letterSpacing: "0.05em",
+                        // textAlign: 'center',
+                        color: "#356",
+                        // textTransform: "uppercase",
                     }}
                 >
-                    <div
-                        style={{
-                            width: "100%",
-                            fontSize: "18vw",
-                            fontWeight: "200",
-                            lineHeight: "108%",
-                            marginInline: "4vw",
-                            marginBottom: "4vw",
-                            letterSpacing: "0.24em",
-                            // textTransform: "uppercase",
-                        }}
-                    >
-                        02
-                    </div>
+                    {"Born from Costa Rica's Volcanic Womb"}
                 </div>
             </ParallaxDiv>
             <ParallaxDiv
-                marginTop={"780vw"}
-                scrollSpeed={0.7}
-                fadeInThreshold={935}
-                fadeOutThreshold={1300}
+                marginTop={"550vw"}
+                scrollSpeed={1}
+                // fadeInThreshold={310}
+                // fadeOutThreshold={450}
             >
                 <div
                     style={{
-                        position: "absolute",
-                        top: "5vw",
-                        display: "flex",
-                        flexDirection: "column",
-                        // background: "#ffffff",
-                        // borderRadius: '4vw',
-                        paddingBlock: "6vw",
-                        width: "100vw",
-                        color: "white",
+                        // width: "100%",
+                        fontSize: "11vw",
+                        fontWeight: "900",
+                        lineHeight: "120%",
+                        marginInline: "8vw",
+                        letterSpacing: "0.05em",
+                        // textAlign: 'center',
+                        color: "#efc",
+                        // textTransform: "uppercase",
                     }}
                 >
-                    <div
-                        style={{
-                            width: "100%",
-                            fontSize: "18vw",
-                            fontWeight: "200",
-                            lineHeight: "108%",
-                            marginInline: "4vw",
-                            marginBottom: "4vw",
-                            letterSpacing: "0.24em",
-                            color: "#0000",
-                            // textTransform: "uppercase",
-                        }}
-                    >
-                        01
-                    </div>
-                    <div
-                        style={{
-                            width: "100%",
-                            fontSize: "9vw",
-                            fontWeight: "900",
-                            lineHeight: "108%",
-                            marginInline: "4vw",
-                            // marginBottom: "2vw",
-                            // textTransform: "uppercase",
-                        }}
-                    >
-                        Lush Rain Forests
-                    </div>
-                    {/* <div
-                        style={{
-                            height: "4vw",
-                        }}
-                    >
-                        <Line color="#343443"></Line>
-                    </div> */}
-                    <div
-                        style={{
-                            MaxWidth: "100%",
-                            fontSize: "4.5vw",
-                            fontWeight: "400",
-                            lineHeight: "124%",
-                            marginTop: "8vw",
-                            letterSpacing: "0.01em",
-                            marginInline: "4vw",
-                            color: "#0000",
-                            // textTransform: "uppercase",
-                        }}
-                    >
-                        Nurtured from the Depths of the Earth The soil, enriched
-                        by the volcanic ash, teems with rare nutrients that
-                        nourish and sustain. Teems with rare nutrients that
-                        nourish and sustain.
-                    </div>
-                    <div
-                        style={{
-                            marginInline: "4vw",
-                            fontSize: "7vw",
-                            fontWeight: "400",
-                            lineHeight: "124%",
-                            marginTop: "6vw",
-                            letterSpacing: "0.01em",
-                            textAlign: "end",
-                            color: "#0000",
-                            // textTransform: "uppercase",
-                        }}
-                    >
-                        {"Learn More --->"}
-                    </div>
+                    {"Amidst the Rainforest's Heartbeat"}
                 </div>
             </ParallaxDiv>
-            <ParallaxDiv
-                marginTop={"780vw"}
-                scrollSpeed={0.7}
-                fadeInThreshold={940}
-                fadeOutThreshold={1300}
-            >
-                <div
-                    style={{
-                        position: "absolute",
-                        top: "5vw",
-                        display: "flex",
-                        flexDirection: "column",
-                        // background: "#ffffff",
-                        // borderRadius: '4vw',
-                        paddingBlock: "6vw",
-                        width: "100vw",
-                        color: "white",
-                    }}
-                >
-                    <div
-                        style={{
-                            width: "100%",
-                            fontSize: "18vw",
-                            fontWeight: "200",
-                            lineHeight: "108%",
-                            marginInline: "4vw",
-                            marginBottom: "4vw",
-                            letterSpacing: "0.24em",
-                            color: "#0000",
-                            // textTransform: "uppercase",
-                        }}
-                    >
-                        01
-                    </div>
-                    <div
-                        style={{
-                            width: "100%",
-                            fontSize: "9vw",
-                            fontWeight: "900",
-                            lineHeight: "108%",
-                            marginInline: "4vw",
-                            color: "#0000",
-                            // marginBottom: "2vw",
-                            // textTransform: "uppercase",
-                        }}
-                    >
-                        Rich Volcanic Soil
-                    </div>
-                    {/* <div
-                        style={{
-                            height: "4vw",
-                        }}
-                    >
-                        <Line color="#343443"></Line>
-                    </div> */}
-                    <div
-                        style={{
-                            MaxWidth: "100%",
-                            fontSize: "4.5vw",
-                            fontWeight: "400",
-                            lineHeight: "124%",
-                            marginTop: "8vw",
-                            letterSpacing: "0.01em",
-                            marginInline: "4vw",
-                            // textTransform: "uppercase",
-                        }}
-                    >
-                        Nurtured from the Depths of the Earth The soil, enriched
-                        by the volcanic ash, teems with rare nutrients that
-                        nourish and sustain. Teems with rare nutrients that
-                        nourish and sustain.
-                    </div>
-                    <div
-                        style={{
-                            marginInline: "4vw",
-                            fontSize: "7vw",
-                            fontWeight: "400",
-                            lineHeight: "124%",
-                            marginTop: "6vw",
-                            letterSpacing: "0.01em",
-                            textAlign: "end",
-                            color: "#0000",
-                            // textTransform: "uppercase",
-                        }}
-                    >
-                        {"Learn More --->"}
-                    </div>
-                </div>
-            </ParallaxDiv>
-            <ParallaxDiv
-                marginTop={"780vw"}
-                scrollSpeed={0.7}
-                fadeInThreshold={940}
-                fadeOutThreshold={1300}
-            >
-                <div
-                    style={{
-                        position: "absolute",
-                        top: "5vw",
-                        display: "flex",
-                        flexDirection: "column",
-                        // background: "#ffffff",
-                        // borderRadius: '4vw',
-                        paddingBlock: "6vw",
-                        width: "100vw",
-                        color: "white",
-                    }}
-                >
-                    <div
-                        style={{
-                            width: "100%",
-                            fontSize: "18vw",
-                            fontWeight: "200",
-                            lineHeight: "108%",
-                            marginInline: "4vw",
-                            marginBottom: "4vw",
-                            letterSpacing: "0.24em",
-                            color: "#0000",
-                            // textTransform: "uppercase",
-                        }}
-                    >
-                        01
-                    </div>
-                    <div
-                        style={{
-                            width: "100%",
-                            fontSize: "9vw",
-                            fontWeight: "900",
-                            lineHeight: "108%",
-                            marginInline: "4vw",
-                            color: "#0000",
-                            // marginBottom: "2vw",
-                            // textTransform: "uppercase",
-                        }}
-                    >
-                        Rich Volcanic Soil
-                    </div>
-                    {/* <div
-                        style={{
-                            height: "4vw",
-                        }}
-                    >
-                        <Line color="#343443"></Line>
-                    </div> */}
-                    <div
-                        style={{
-                            MaxWidth: "100%",
-                            fontSize: "4.5vw",
-                            fontWeight: "400",
-                            lineHeight: "124%",
-                            marginTop: "8vw",
-                            letterSpacing: "0.01em",
-                            marginInline: "4vw",
-                            color: "#0000",
-                            // textTransform: "uppercase",
-                        }}
-                    >
-                        Nurtured from the Depths of the Earth The soil, enriched
-                        by the volcanic ash, teems with rare nutrients that
-                        nourish and sustain. Teems with rare nutrients that
-                        nourish and sustain.
-                    </div>
-                    <div
-                        style={{
-                            marginInline: "4vw",
-                            fontSize: "7vw",
-                            fontWeight: "400",
-                            lineHeight: "124%",
-                            marginTop: "6vw",
-                            letterSpacing: "0.01em",
-                            textAlign: "end",
-                            // textTransform: "uppercase",
-                        }}
-                    >
-                        {"Learn More --->"}
-                    </div>
-                </div>
-            </ParallaxDiv>
-
-            <ParallaxDiv marginTop={"600vw"} scrollSpeed={0.36}>
-                <div
-                    style={{
-                        position: "relative",
-                        width: "100vw",
-                        height: "200vw",
-                    }}
-                >
-                    <Image
-                        src="/grass.png"
-                        alt="sky"
-                        fill
-                        sizes="100vw"
-                        priority
-                        style={{
-                            objectFit: "cover",
-                        }}
-                    />
-                </div>
-            </ParallaxDiv>
-
-
         </div>
+    );
+};
+
+const ParallaxImage = ({ marginTop, scrollSpeed, src, height }) => {
+    return (
+        <ParallaxDiv marginTop={marginTop} scrollSpeed={scrollSpeed}>
+            <div
+                style={{
+                    position: "relative",
+                    width: "100vw",
+                    height: height,
+                }}
+            >
+                <Image
+                    src={src}
+                    alt="sky"
+                    fill
+                    sizes="40vw"
+                    priority
+                    style={{
+                        objectFit: "cover",
+                    }}
+                />
+            </div>
+        </ParallaxDiv>
     );
 };
 
