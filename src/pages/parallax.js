@@ -1480,9 +1480,14 @@ import Image from "next/image";
 import ParallaxDiv from "./ParallaxDiv";
 import Line from "@/components/Line";
 import Logo from "@/components/Logo";
-import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
+import {
+    ArrowLongDownIcon,
+    ArrowLongRightIcon,
+    ChevronDoubleDownIcon,
+} from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { useColor } from "@/components/Providers/ColorProvider";
+import { motion } from "framer-motion";
 
 const ParallaxPage = () => {
     useEffect(() => {
@@ -1548,7 +1553,7 @@ const ParallaxPage = () => {
                         flexDirection: "column",
                         alignItems: "center",
                         justifyContent: "flex-start",
-                        paddingInline: "3vw",
+                        paddingInline: "6vw",
                     }}
                 >
                     <div
@@ -1594,6 +1599,50 @@ const ParallaxPage = () => {
                 </div>
             </ParallaxDiv>
 
+            <ParallaxDiv marginTop={"0vw"} scrollSpeed={1} fadeOutThreshold={1}>
+                <div
+                    style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        justifyContent: "flex-end",
+                        alignItems: "center",
+                        height: "100vh",
+                        paddingBottom: "26vw",
+                        color: "white",
+                        width: "100vw",
+                    }}
+                >
+                    <div
+                        style={{
+                            fontSize: "4.5vw",
+                            // fontWeight: 200,
+                            // width: '20vw',
+                            textAlign: "center",
+                            // textTransform: "uppercase",
+                        }}
+                    >
+                        scroll to explore
+                    </div>
+                    <motion.div
+                        animate={{ y: [0, -8, 0] }}
+                        transition={{
+                            repeat: Infinity,
+                            duration: 1,
+                            ease: "easeInOut",
+                        }}
+                        style={{
+                            fontSize: "3vw",
+                            marginTop: "5vw",
+                            userSelect: "none",
+                            cursor: "pointer",
+                        }}
+                    >
+                        <ChevronDoubleDownIcon height={"5vw"} />
+                    </motion.div>
+                </div>
+            </ParallaxDiv>
+
             <ParallaxDiv
                 marginTop={"180vw"}
                 scrollSpeed={1}
@@ -1632,7 +1681,9 @@ const ParallaxPage = () => {
                             // textTransform: "uppercase",
                         }}
                     >
-                        {"Costa Rica's mineral-rich volcanic soil, brimming with fertility, boosts cocoa growth and imbues the beans with a unique, complex flavor, lending a distinct taste to its chocolate."}
+                        {
+                            "Costa Rica's mineral-rich volcanic soil, brimming with fertility, boosts cocoa growth and imbues the beans with a unique, complex flavor, lending a distinct taste to its chocolate."
+                        }
                     </div>
 
                     <Link
@@ -1663,7 +1714,7 @@ const ParallaxPage = () => {
                                 flexDirection: "column",
                             }}
                         >
-                            learn More
+                            Learn more
                         </div>
                         <ArrowLongRightIcon width={"7vw"} />
                     </Link>
@@ -1750,7 +1801,9 @@ const ParallaxPage = () => {
                             // textTransform: "uppercase",
                         }}
                     >
-                        {"Costa Rica's humid rainforest, rich with biodiversity, infuses its cocoa beans with a spectrum of flavors, reflecting the forest's vibrancy and enhancing the unique taste of Costa Rican chocolate."}
+                        {
+                            "Costa Rica's humid rainforest, rich with biodiversity, infuses its cocoa beans with a spectrum of flavors, reflecting the forest's vibrancy and enhancing the unique taste of Costa Rican chocolate."
+                        }
                     </div>
 
                     <Link
@@ -1781,7 +1834,7 @@ const ParallaxPage = () => {
                                 flexDirection: "column",
                             }}
                         >
-                            learn More
+                            Learn more
                         </div>
                         <ArrowLongRightIcon width={"7vw"} />
                     </Link>
