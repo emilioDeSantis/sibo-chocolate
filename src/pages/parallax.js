@@ -1521,60 +1521,17 @@ const ParallaxPage = () => {
             />
 
             <ParallaxImage
-                marginTop={"400vw"}
+                marginTop={"410vw"}
                 scrollSpeed={0.9}
                 src="/foliage 2 x2.png"
                 height="300vw"
             />
 
-            {/* <ParallaxDiv
-                marginTop={"0vw"}
-                scrollSpeed={0}
-                fadeInThreshold={-100}
-                fadeOutThreshold={20}
-            >
-                <div
-                    style={{
-                        width: "100vw",
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center",
-                        justifyContent: "flex-start",
-                        paddingInline: "4vw",
-                    }}
-                >
-                    <div
-                        style={{
-                            width: "100%",
-                            textAlign: "center",
-                            fontSize: "14vw",
-                            fontWeight: "900",
-                            color: "#441812",
-                            lineHeight: "100%",
-                        }}
-                    >
-                        FRESH FROM THE SOURCE
-                    </div>
-                    <div
-                        style={{
-                            marginTop: "4vw",
-                            width: "100%",
-                            textAlign: "center",
-                            fontSize: "5vw",
-                            fontWeight: "700",
-                            color: "#441812",
-                        }}
-                    >
-                        Costa Rican Origin Chocolate
-                    </div>
-                </div>
-            </ParallaxDiv>
-
             <ParallaxDiv
-                marginTop={"60vw"}
+                marginTop={"300vw"}
                 scrollSpeed={1}
-                fadeInThreshold={-100}
-                fadeOutThreshold={20}
+                // fadeInThreshold={-100}
+                // fadeOutThreshold={20}
             >
                 <div
                     style={{
@@ -1613,9 +1570,10 @@ const ParallaxPage = () => {
                 </div>
             </ParallaxDiv>
 
+
             <ParallaxDiv
-                marginTop={"180vw"}
-                scrollSpeed={0.6}
+                marginTop={"460vw"}
+                scrollSpeed={1}
                 // fadeInThreshold={70}
                 // fadeOutThreshold={250}
             >
@@ -1628,14 +1586,39 @@ const ParallaxPage = () => {
                         marginInline: "8vw",
                         letterSpacing: "0.05em",
                         // textAlign: 'center',
-                        color: "#356",
+                        color: "#fdb",
                         // textTransform: "uppercase",
                     }}
                 >
                     {"Born from Costa Rica's Volcanic Womb"}
                 </div>
-            </ParallaxDiv> */}
-            <div style={{
+            </ParallaxDiv>
+
+
+
+            <ParallaxDiv
+                marginTop={"610vw"}
+                scrollSpeed={1}
+                // fadeInThreshold={70}
+                // fadeOutThreshold={250}
+            >
+                <div
+                    style={{
+                        // width: "100%",
+                        fontSize: "11vw",
+                        fontWeight: "900",
+                        lineHeight: "120%",
+                        marginInline: "8vw",
+                        letterSpacing: "0.05em",
+                        // textAlign: 'center',
+                        color: "#bef",
+                        // textTransform: "uppercase",
+                    }}
+                >
+                    {"Amidst the Rainforest's Heartbeat"}
+                </div>
+            </ParallaxDiv>
+            {/* <div style={{
                 position: 'absolute',
                 display: 'flex',
                 flexDirection: 'column',
@@ -1678,7 +1661,7 @@ const ParallaxPage = () => {
                         Costa Rican Origin Chocolate
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 };
