@@ -1540,6 +1540,51 @@ const ParallaxPage = () => {
                 height="300vw"
             />
 
+
+<ParallaxDiv marginTop={"0vw"} scrollSpeed={1} fadeOutThreshold={1}>
+                <div
+                    style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        justifyContent: "flex-end",
+                        alignItems: "center",
+                        height: "100vh",
+                        paddingBottom: "26vw",
+                        color: "white",
+                        width: "100vw",
+                    }}
+                >
+                    <div
+                        style={{
+                            fontSize: "4.5vw",
+                            // fontWeight: 200,
+                            // width: '20vw',
+                            textAlign: "center",
+                            // textTransform: "uppercase",
+                        }}
+                    >
+                        scroll to explore
+                    </div>
+                    <motion.div
+                        animate={{ y: [0, -8, 0] }}
+                        transition={{
+                            repeat: Infinity,
+                            duration: 1,
+                            ease: "easeInOut",
+                        }}
+                        style={{
+                            fontSize: "3vw",
+                            marginTop: "5vw",
+                            userSelect: "none",
+                            cursor: "pointer",
+                        }}
+                    >
+                        <ChevronDoubleDownIcon height={"5vw"} />
+                    </motion.div>
+                </div>
+            </ParallaxDiv>
+
             <ParallaxDiv
                 marginTop={"20vw"}
                 scrollSpeed={1}
@@ -1599,49 +1644,6 @@ const ParallaxPage = () => {
                 </div>
             </ParallaxDiv>
 
-            <ParallaxDiv marginTop={"0vw"} scrollSpeed={1} fadeOutThreshold={1}>
-                <div
-                    style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center",
-                        justifyContent: "flex-end",
-                        alignItems: "center",
-                        height: "100vh",
-                        paddingBottom: "26vw",
-                        color: "white",
-                        width: "100vw",
-                    }}
-                >
-                    <div
-                        style={{
-                            fontSize: "4.5vw",
-                            // fontWeight: 200,
-                            // width: '20vw',
-                            textAlign: "center",
-                            // textTransform: "uppercase",
-                        }}
-                    >
-                        scroll to explore
-                    </div>
-                    <motion.div
-                        animate={{ y: [0, -8, 0] }}
-                        transition={{
-                            repeat: Infinity,
-                            duration: 1,
-                            ease: "easeInOut",
-                        }}
-                        style={{
-                            fontSize: "3vw",
-                            marginTop: "5vw",
-                            userSelect: "none",
-                            cursor: "pointer",
-                        }}
-                    >
-                        <ChevronDoubleDownIcon height={"5vw"} />
-                    </motion.div>
-                </div>
-            </ParallaxDiv>
 
             <ParallaxDiv
                 marginTop={"180vw"}
@@ -1682,7 +1684,7 @@ const ParallaxPage = () => {
                         }}
                     >
                         {
-                            "Costa Rica's mineral-rich volcanic soil, brimming with fertility, boosts cocoa growth and imbues the beans with a unique, complex flavor, lending a distinct taste to its chocolate."
+                            "For thousands of years, ancient lava flows and volcanic ash have fed these lands with nutrients and minerals to form a rare type of soil called Andisol. This rich earth and year-round warm, tropical weather contribute to our cacao’s unique terroir."
                         }
                     </div>
 
@@ -1786,7 +1788,7 @@ const ParallaxPage = () => {
                             // textTransform: "uppercase",
                         }}
                     >
-                        {"Amidst the Lush Rainforest"}
+                        {"Forests Made of Chocolate"}
                     </div>
 
                     <div
@@ -1802,7 +1804,7 @@ const ParallaxPage = () => {
                         }}
                     >
                         {
-                            "Costa Rica's humid rainforest, rich with biodiversity, infuses its cocoa beans with a spectrum of flavors, reflecting the forest's vibrancy and enhancing the unique taste of Costa Rican chocolate."
+                            "Sibö partner farms are transforming cattle pastures and banana fields into forests of cacao. These planted forests house precious hardwood trees that provide cacao with optimal shade, as well as tropical fruit trees that promote a healthy and biodiverse farm environment."
                         }
                     </div>
 
