@@ -12,6 +12,7 @@ const ParallaxDiv = ({children, scrollSpeed, marginTop, fadeInThreshold, fadeOut
             fadeIn: fadeInThreshold? fadeInThreshold * (window.innerWidth / 100) : -1000,
             fadeOut: fadeOutThreshold? fadeOutThreshold * (window.innerWidth / 100) : 1000000
         });
+        console.log(window.innerWidth);
     }, [fadeInThreshold, fadeOutThreshold]);
 
     useEffect(() => {
