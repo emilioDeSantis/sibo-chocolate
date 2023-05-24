@@ -36,7 +36,7 @@ const ParallaxDiv = ({children, scrollSpeed, marginTop, fadeInThreshold, fadeOut
         transform: springScrollOffset.to(value => `translateY(${-value * scrollSpeed}px)`),
         marginTop: marginTop,
         willChange: 'transform opacity',
-        transition: 'opacity 0.3s ease-in-out',
+        transition: 'opacity 1.2s ease-in-out',
         opacity: springScrollOffset.to(value => {
             if (value >= vwToPixels.fadeIn && value <= vwToPixels.fadeOut) {
                 return 1;
