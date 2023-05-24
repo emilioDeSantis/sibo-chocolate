@@ -215,7 +215,7 @@ const ParallaxImage = ({
                   src={src}
                   alt="sky"
                   fill
-                  sizes="40vw"
+                  sizes="100vw"
                   priority
                   style={{
                       objectFit: "cover",
