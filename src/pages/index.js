@@ -15,167 +15,196 @@ import {
 import Link from "next/link";
 import { useColor } from "@/components/Providers/ColorProvider";
 import { motion } from "framer-motion";
+import Canopy from "@/components/Canopy";
+import Treetops from "@/components/Treetops";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-    return (
-        <div
-            style={{
-                height: "1350vw",
-                position: "relative",
-                overflow: "hidden",
-                background: "#081017",
-            }}
-        >
-            <ParallaxImage
-                marginTop={"-60vw"}
-                scrollSpeed={0.3}
-                src="/sky x2.png"
-                height="200vw"
-            />
-            <ParallaxImage
-                marginTop={"26vw"}
-                scrollSpeed={0.4}
-                src="/volc d.png"
-                height="100vw"
-            />
-            <ParallaxImage
-                marginTop={"50vw"}
-                scrollSpeed={0.5}
-                src="/mounts d.png"
-                height="100vw"
-            />
-            <ParallaxImage
-                marginTop={"33vw"}
-                scrollSpeed={0.65}
-                src="/hills c.png"
-                height="500vw"
-            />
-            <ParallaxImage
-                marginTop={"120vw"}
-                scrollSpeed={0.8}
-                src="/treetop sill b.png"
-                height="100vw"
-            />
+//     return (
+//         <div
+//             style={{
+//                 height: "1350vw",
+//                 position: "relative",
+//                 overflow: "hidden",
+//                 background: "#081017",
+//             }}
+//         >
+//             <ParallaxImage
+//                 marginTop={"-60vw"}
+//                 scrollSpeed={0.3}
+//                 src="/sky x2.png"
+//                 height="200vw"
+//             />
+//             <ParallaxImage
+//                 marginTop={"26vw"}
+//                 scrollSpeed={0.4}
+//                 src="/volc d.png"
+//                 height="100vw"
+//             />
+//             <ParallaxImage
+//                 marginTop={"50vw"}
+//                 scrollSpeed={0.5}
+//                 src="/mounts d.png"
+//                 height="100vw"
+//             />
+//             <ParallaxImage
+//                 marginTop={"33vw"}
+//                 scrollSpeed={0.65}
+//                 src="/hills c.png"
+//                 height="500vw"
+//             />
 
-            <ParallaxDiv marginTop={"220vw"} scrollSpeed={0.8}>
-                <div style={{
-                  width: '100vw',
-                  height: '100vw',
-                  background: '#07110a',
-                }} />
-            </ParallaxDiv>
-            {/* 
-        <ParallaxImage
-            marginTop={"33vw"}
-            scrollSpeed={0.28}
-            src="/feild c.png"
-            height="500vw"
-        />
+//             <ParallaxSVG 
+//                 marginTop={"125vw"}
+//                 scrollSpeed={0.8}
+//                 background={'#3C2221'}>
+//               <Canopy color={'#3C2221'}/>
+//             </ParallaxSVG>
+//             {/* <ParallaxImage
+//                 marginTop={"120vw"}
+//                 scrollSpeed={0.8}
+//                 src="/treetop sill d.png"
+//                 height="100vw"
+//             />
 
-        <ParallaxImage
-            marginTop={"46vw"}
-            scrollSpeed={0.34}
-            src="/farm hill 1.png"
-            height="500vw"
-        />
-        <ParallaxImage
-            marginTop={"46vw"}
-            scrollSpeed={0.34}
-            src="/cacaos 1 c.png"
-            height="500vw"
-            fadeInThreshold={460}
-        />
+//             <ParallaxDiv marginTop={"220vw"} scrollSpeed={0.8}>
+//                 <div style={{
+//                   width: '100vw',
+//                   height: '300vw',
+//                   background: '#2d140a',
+//                 }} />
+//             </ParallaxDiv> */}
 
-        <ParallaxImage
-            marginTop={"140vw"}
-            scrollSpeed={0.5}
-            src="/trees 2 c copy 2.png"
-            height="500vw"
-        />
 
-        <ParallaxImage
-            marginTop={"100vw"}
-            scrollSpeed={0.42}
-            src="/farm hill 2 c.png"
-            height="500vw"
-        />
-        <ParallaxImage
-            marginTop={"100vw"}
-            scrollSpeed={0.42}
-            src="/cacao 2 c copy 2.png"
-            height="500vw"
-            fadeInThreshold={480}
-        />
+// <ParallaxImage
+//             marginTop={"210vw"}
+//             scrollSpeed={0.5}
+//             src="/clound g.png"
+//             height="100vw"
+//         />
+// <ParallaxImage
+//             marginTop={"255vw"}
+//             scrollSpeed={0.57}
+//             src="/farm hills g copy 2.png"
+//             height="100vw"
+//         />
+//         <ParallaxImage
+//                     marginTop={"300vw"}
+//                     scrollSpeed={0.66}
+//                     src="/hills 2 h.png"
+//                     height="200vw"
+//                 />
 
-        <ParallaxImage
-            marginTop={"210vw"}
-            scrollSpeed={0.62}
-            src="/trees 3 c copy.png"
-            height="500vw"
-        /> */}
-            {/* <ParallaxImage
-            marginTop={"160vw"}
-            scrollSpeed={0.52}
-            src="/farm hill 3 c.png"
-            height="500vw"
-        />
-        <ParallaxImage
-            marginTop={"160vw"}
-            scrollSpeed={0.52}
-            src="/cacao 3 c copy.png"
-            height="500vw"
-            fadeInThreshold={500}
-        /> */}
-            <ParallaxImage
-                marginTop={"540vw"}
-                scrollSpeed={0.64}
-                src="/farm d.png"
-                height="200vw"
-            />
-            <ParallaxImage
-                marginTop={"620vw"}
-                scrollSpeed={0.78}
-                src="/well d.png"
-                height="500vw"
-            />
+//         <ParallaxImage
+//                     marginTop={"340vw"}
+//                     scrollSpeed={0.8}
+//                     src="/farm fore e copy 2.png"
+//                     height="200vw"
+//                 />
 
-            <ParallaxPreview
-                marginTop={"216vw"}
-                title="Chocolate Fresh from the Source"
-                subTitle={["Soil", "beans", "ancient tradition"]}
-                text="Not all chocolate is created equal. Costa Rica’s nutrient rich volcanic soil, superior quality cacao beans and a 3,000 year-tradition of preparing xocolatl as a source of energy and pleasure have inspired us to bring you a new world of chocolate flavor. You’ll never think about chocolate the same way again."
-                href="/demo"
-            />
-            <ParallaxPreview
-                marginTop={"410vw"}
-                title="Forests Made of Chocolate"
-                subTitle={["Agroforestry", "Upcycling", "Regenerative farming"]}
-                text="Unlike some countries that clear cut forest to plant cacao, Costa Rica sees cacao as a means of agroforestry and regenerative farming. Sibö partner farms are actually changing Costa Rica’s landscape by transforming cattle pastures and banana fields into forests of cacao. How we source cacao and how we package our finished products are part of our commitment to our country and our planet."
-                href="/demo"
-            />
 
-            <ParallaxPreview
-                marginTop={"720vw"}
-                title="Directly Traded"
-                subTitle={["Meet our farmers"]}
-                text="At Sibö chocolate, we trade directly with our partner farmers, which means we are able to pay stable, above-market prices that incentivizes cacao production in Costa Rica. We are proud to do our part in reimagining the way the cacao supply chain should work in Costa Rica and promote a new paradigm rooted in fair trade."
-                href="/demo"
-            />
-            <ParallaxPreview
-                marginTop={"950vw"}
-                title="Chocolate & Wellness"
-                subTitle={["Your mind, body, spirit on chocolate"]}
-                text="Modern science is proving what indigenous people in Central America have known for Millenia: Chocolate gives you energy, makes you feel good, and can help keep your heart and mind healthy. Chocolate is also loaded with polyphenols (antioxidants) and minerals, like magnesium, iron and potassium. Sibö chocolate is tested safe for heavy metals that have gotten some press in recent years."
-                href="/demo"
-            />
 
-            <ParallaxArrow />
+//             <ParallaxSVG 
+//                 marginTop={"540vw"}
+//                 scrollSpeed={0.9}
+//                 background={'#0f1617'}>
+//               <Treetops color={'#0f1617'}/>
+//             </ParallaxSVG>
 
-            <ParallaxTitle />
-        </div>
-    );
+
+
+//             {/* 
+
+
+//         <ParallaxImage
+//             marginTop={"140vw"}
+//             scrollSpeed={0.5}
+//             src="/trees 2 c copy 2.png"
+//             height="500vw"
+//         />
+
+//         <ParallaxImage
+//             marginTop={"100vw"}
+//             scrollSpeed={0.42}
+//             src="/farm hill 2 c.png"
+//             height="500vw"
+//         />
+//         <ParallaxImage
+//             marginTop={"100vw"}
+//             scrollSpeed={0.42}
+//             src="/cacao 2 c copy 2.png"
+//             height="500vw"
+//             fadeInThreshold={480}
+//         />
+
+//         <ParallaxImage
+//             marginTop={"210vw"}
+//             scrollSpeed={0.62}
+//             src="/trees 3 c copy.png"
+//             height="500vw"
+//         /> */}
+//             {/* <ParallaxImage
+//             marginTop={"160vw"}
+//             scrollSpeed={0.52}
+//             src="/farm hill 3 c.png"
+//             height="500vw"
+//         />
+//         <ParallaxImage
+//             marginTop={"160vw"}
+//             scrollSpeed={0.52}
+//             src="/cacao 3 c copy.png"
+//             height="500vw"
+//             fadeInThreshold={500}
+//         /> */}
+//             <ParallaxImage
+//                 marginTop={"540vw"}
+//                 scrollSpeed={0.64}
+//                 src="/farm d.png"
+//                 height="200vw"
+//             />
+//             <ParallaxImage
+//                 marginTop={"620vw"}
+//                 scrollSpeed={0.78}
+//                 src="/well d.png"
+//                 height="500vw"
+//             />
+
+//             <ParallaxPreview
+//                 marginTop={"216vw"}
+//                 title="Chocolate Fresh from the Source"
+//                 subTitle={["Soil", "beans", "ancient tradition"]}
+//                 text="Not all chocolate is created equal. Costa Rica’s nutrient rich volcanic soil, superior quality cacao beans and a 3,000 year-tradition of preparing xocolatl as a source of energy and pleasure have inspired us to bring you a new world of chocolate flavor. You’ll never think about chocolate the same way again."
+//                 href="/demo"
+//             />
+//             {/* <ParallaxPreview
+//                 marginTop={"410vw"}
+//                 title="Forests Made of Chocolate"
+//                 subTitle={["Agroforestry", "Upcycling", "Regenerative farming"]}
+//                 text="Unlike some countries that clear cut forest to plant cacao, Costa Rica sees cacao as a means of agroforestry and regenerative farming. Sibö partner farms are actually changing Costa Rica’s landscape by transforming cattle pastures and banana fields into forests of cacao. How we source cacao and how we package our finished products are part of our commitment to our country and our planet."
+//                 href="/demo"
+//             /> */}
+
+//             {/* <ParallaxPreview
+//                 marginTop={"720vw"}
+//                 title="Directly Traded"
+//                 subTitle={["Meet our farmers"]}
+//                 text="At Sibö chocolate, we trade directly with our partner farmers, which means we are able to pay stable, above-market prices that incentivizes cacao production in Costa Rica. We are proud to do our part in reimagining the way the cacao supply chain should work in Costa Rica and promote a new paradigm rooted in fair trade."
+//                 href="/demo"
+//             />
+//             <ParallaxPreview
+//                 marginTop={"950vw"}
+//                 title="Chocolate & Wellness"
+//                 subTitle={["Your mind, body, spirit on chocolate"]}
+//                 text="Modern science is proving what indigenous people in Central America have known for Millenia: Chocolate gives you energy, makes you feel good, and can help keep your heart and mind healthy. Chocolate is also loaded with polyphenols (antioxidants) and minerals, like magnesium, iron and potassium. Sibö chocolate is tested safe for heavy metals that have gotten some press in recent years."
+//                 href="/demo"
+//             /> */}
+
+//             <ParallaxArrow />
+
+//             <ParallaxTitle />
+//         </div>
+//     );
     return (
         <div
             style={{
@@ -486,7 +515,7 @@ const ParallaxImage = ({
                     src={src}
                     alt="sky"
                     fill
-                    sizes="100vw"
+                    sizes="30vw"
                     priority
                     style={{
                         objectFit: "cover",
@@ -495,6 +524,41 @@ const ParallaxImage = ({
             </div>
         </ParallaxDiv>
     );
+};
+
+
+const ParallaxSVG = ({
+  marginTop,
+  scrollSpeed,
+  fadeInThreshold,
+  background,
+  children
+}) => {
+  return (
+      <ParallaxDiv
+          marginTop={marginTop}
+          scrollSpeed={scrollSpeed}
+          fadeInThreshold={fadeInThreshold}
+      >
+          <div
+              style={{
+                  position: "relative",
+                  width: "100vw",
+                  display: 'flex',
+                  flexDirection: 'column',
+              }}
+          >
+              {children}
+              <div 
+              style={{
+                  width: "100vw",
+                  height: '1000vw',
+                  background: background,
+                  marginTop: '-10px'
+              }}/>
+          </div>
+      </ParallaxDiv>
+  );
 };
 
 const ParallaxPreview = ({ marginTop, title, subTitle, text, href }) => {
@@ -595,6 +659,7 @@ const ParallaxPreview = ({ marginTop, title, subTitle, text, href }) => {
         </ParallaxDiv>
     );
 };
+
 
 const ParallaxArrow = () => {
     return (
