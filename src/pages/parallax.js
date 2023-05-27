@@ -6,7 +6,7 @@ import styles from "@/styles/Home.module.css";
 import React, { useEffect, useRef } from "react";
 import ParallaxDiv from "./ParallaxDiv";
 import Line from "@/components/Line";
-import Logo2 from "@/components/Logo2";
+import Logo2 from "@/components/svg/Logo2";
 import {
     ArrowLongDownIcon,
     ArrowLongRightIcon,

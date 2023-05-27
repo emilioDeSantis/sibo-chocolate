@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import DropdownMenu from "./DropdownMenu";
-import Logo from "./Logo";
+import Logo from "./svg/Logo";
 import { ShoppingBagIcon } from "@heroicons/react/24/outline";
 import CategoryDropdown from "./CategoryDropdown";
 import categories from "@/data/categories";
