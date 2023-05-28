@@ -174,28 +174,28 @@ const categories = [
         slug: "milk-bars",
         color: "#8C3B1E",
         products: [
-            {
-                id: 1,
-                name: "Milk",
-                description:
-                    "Smooth and creamy texture that effortlessly dissolves on your tongue, providing a velvety and gratifying mouthfeel. Opulent and flavorful, exuding a luscious and indulgent taste that is certain to please your taste buds.",
-                backgroundImageUrl: "/milk milk bar.png",
-                cacaoPercentage: 45,
-                weightInGrams: 50,
-                flavorProfile: "Herbal, with dried fruit and tapa de dulce",
-                price: 12.15,
-                color: '#F5C387',
-            },
+            // {
+            //     id: 1,
+            //     name: "Milk",
+            //     description:
+            //         "Smooth and creamy texture that effortlessly dissolves on your tongue, providing a velvety and gratifying mouthfeel. Opulent and flavorful, exuding a luscious and indulgent taste that is certain to please your taste buds.",
+            //     backgroundImageUrl: "/milk milk bar.png",
+            //     cacaoPercentage: 45,
+            //     weightInGrams: 50,
+            //     flavorProfile: "Herbal, with dried fruit and tapa de dulce",
+            //     price: 12.15,
+            //     color: '#F5C387',
+            // },
             {
                 id: 2,
                 name: "Mint",
                 description:
-                    "Smooth and creamy texture that effortlessly dissolves on your tongue, providing a velvety and gratifying mouthfeel. Opulent and flavorful, exuding a luscious and indulgent taste that is certain to please your taste buds.",
+                    "Our smooth milk chocolate bar with a kiss of fresh mint. This classic combination warms the heart and cools the palate.",
                 backgroundImageUrl: "/mint milk bar.png",
                 cacaoPercentage: 45,
                 weightInGrams: 50,
                 flavorProfile: "Herbal, with dried fruit and tapa de dulce",
-                price: 16.15,
+                price: 4.99,
                 color: '#D3E4B3',
             },
             {

@@ -8,7 +8,7 @@ export function useColor() {
 }
 
 export function ColorProvider({ children }) {
-  const [color, setColor] = useState('#F5C387');
+  const [color, setColor] = useState('#D3E4B3');
 
   const value = {
     color,

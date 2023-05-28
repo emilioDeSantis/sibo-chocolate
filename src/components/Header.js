@@ -76,7 +76,7 @@ const Header = ({}) => {
             >
                 <div style={{ display: "flex", alignItems: "center" }}>
                     <Link
-                        href="/demo"
+                        href="/"
                         style={{
                             width: "26vw",
                             height: "12vw",

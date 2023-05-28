@@ -301,9 +301,6 @@ export default function Home() {
                 />
             </ParallaxComponent>
 
-            <ParallaxComponent scrollSpeed={1} marginTop={"0vw"}>
-                <ParallaxTitle />
-            </ParallaxComponent>
 
             <ParallaxComponent scrollSpeed={1} marginTop={"0vw"}>
                 <ParallaxArrow />
@@ -323,7 +320,7 @@ export default function Home() {
                         title="Chocolate Fresh from the Source"
                         subTitle="Soil beans & ancient tradition"
                         text="Not all chocolate is created equal. Costa Rica’s nutrient rich volcanic soil, superior quality cacao beans and a 3,000 year-tradition of preparing xocolatl as a source of energy and pleasure have inspired us to bring you a new world of chocolate flavor. You’ll never think about chocolate the same way again."
-                        href="/demo"
+                        href="/costa"
                     />
 
                     <ParallaxPreview
@@ -350,6 +347,11 @@ export default function Home() {
                         href="/demo"
                     />
                 </div>
+            </ParallaxComponent>
+
+
+            <ParallaxComponent scrollSpeed={1} marginTop={"0vw"}>
+                <ParallaxTitle />
             </ParallaxComponent>
         </div>
     );
