@@ -7,7 +7,7 @@ import { useColor } from "./Providers/ColorProvider";
 const DropdownMenu = () => {
     const [menuVisible, setMenuVisible] = useState(false);
     const menuRef = useRef(null);
-    const {color} = useColor()
+    const {color, textColor} = useColor()
 
     useEffect(() => {
         const handleClickOutside = (event) => {
@@ -56,9 +56,9 @@ const DropdownMenu = () => {
                 }}
             >
                 {menuVisible ? (
-                    <XMarkIcon color="black" height={'7vw'}/>
+                    <XMarkIcon color={textColor} height={'7vw'}/>
                 ) : (
-                    <Bars3Icon color="black" height={'7vw'}/>
+                    <Bars3Icon color={textColor} height={'7vw'}/>
                 )}
             </div>
             <div
@@ -71,7 +71,7 @@ const DropdownMenu = () => {
                     backgroundColor: color,
                     zIndex: 1000,
                     overflow: "hidden",
-                    transform: menuVisible ? "translate(0, 0)" : "translate(0, -60vw)",
+                    transform: menuVisible ? "translate(0, 0)" : "translate(0, -78vw)",
                     transformOrigin: "top",
                     transition: "transform 0.3s ease-in-out",
                     zIndex: -1,
@@ -79,13 +79,16 @@ const DropdownMenu = () => {
                     paddingBottom: '4vw',
                   }}
             >
-                <DropdownItem href="/demo" onClick={closeMenu}>
+            <DropdownItem href="/about" onClick={closeMenu}>
+                About
+            </DropdownItem>
+                <DropdownItem href="/tour" onClick={closeMenu}>
                     Tour
                 </DropdownItem>
-                <DropdownItem href="/demo" onClick={closeMenu}>
+                <DropdownItem href="/contact" onClick={closeMenu}>
                     Contact
                 </DropdownItem>
-                <DropdownItem href="/demo" onClick={closeMenu}>
+                <DropdownItem href="/shop" onClick={closeMenu}>
                     Shop
                 </DropdownItem>
             </div>

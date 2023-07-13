@@ -5,6 +5,8 @@ const categories = [
         slug: "coffee-bars",
         color: '#542112',
         accent: '#542112',
+        backgroundImageUrl: "/catagory test.png",
+        text:'jhgfjh',
         products: [
             {
                 id: 1,
@@ -61,6 +63,7 @@ const categories = [
         name: "Sugar Free",
         slug: "sugar-free",
         color: '#C5683A',
+        backgroundImageUrl: "/catagory test.png",
         products: [
             {
                 id: 1,
@@ -117,6 +120,7 @@ const categories = [
         name: "Dark Bars",
         slug: "dark-bars",
         color: '#C5683A',
+        backgroundImageUrl: "/catagory test.png",
         products: [
             {
                 id: 1,
@@ -173,6 +177,7 @@ const categories = [
         name: "Milk Bars",
         slug: "milk-bars",
         color: "#8C3B1E",
+        backgroundImageUrl: "/catagory test.png",
         products: [
             // {
             //     id: 1,
@@ -229,6 +234,7 @@ const categories = [
         name: "Coated Coffee & Nuts",
         slug: "coated-coffee-nuts",
         color: '#C5683A',
+        backgroundImageUrl: "/catagory test.png",
         products: [
             {
                 id: 1,
@@ -285,6 +291,7 @@ const categories = [
         name: "Hot Chocolate Mix",
         slug: "hot-chocolate-mix",
         color: '#C5683A',
+        backgroundImageUrl: "/catagory test.png",
         products: [
             {
                 id: 1,
@@ -340,6 +347,7 @@ const categories = [
         id: 7,
         name: "Coated Fruit",
         slug: "coated-fruit",
+        backgroundImageUrl: "/catagory test.png",
         color: '#C5683A',
         products: [
             {

@@ -9,7 +9,7 @@ import { useRouter } from "next/router";
 
 const CategoryDropdown = ({ categories }) => {
 
-  const {color} = useColor()
+  const {color, textColor} = useColor()
     const [isOpen, setIsOpen] = useState(false);
     const router = useRouter();
 
@@ -33,13 +33,12 @@ const CategoryDropdown = ({ categories }) => {
                     alignItems: 'center',
                     border: "none",
                     borderRadius: "1vw",
-                    color: "black",
+                    color: textColor,
                     height: '12vw',
                     width: '100%',
                     fontSize: '3.5vw',
                     fontWeight: '500',
                     zIndex: 11,
-                    letterSpacing: '0.0em',
                 }}
             >
                 <div style={{
@@ -48,11 +47,12 @@ const CategoryDropdown = ({ categories }) => {
                   <div style={{
                     paddingTop:'0.8vw',
                     paddingRight:'1.2vw',
+                    whiteSpace: 'nowrap',
                   }}>
                   {isOpen ? 'CLOSE MENU': 'ALL CHOCOLATES' }
                   </div>
-                  {isOpen &&<ChevronUpIcon color="black" height="6vw"/>}
-                  {!isOpen &&<ChevronDownIcon color="black" height="6vw"/>}
+                  {isOpen &&<ChevronUpIcon color={textColor} height="6vw"/>}
+                  {!isOpen &&<ChevronDownIcon color={textColor} height="6vw"/>}
                 </div>
             </button>
 

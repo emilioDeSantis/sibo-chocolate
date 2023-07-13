@@ -1,6 +1,11 @@
 import React from "react";
+import { useColor } from "./Providers/ColorProvider";
+
 
 const Footer = ({ currentProduct }) => {
+
+
+  const {color, textColor} = useColor()
     if (!currentProduct) return null;
 
     return (
@@ -18,7 +23,7 @@ const Footer = ({ currentProduct }) => {
                 justifyContent: "space-between",
                 alignItems: "center",
                 padding: "4vw",
-                backgroundColor: currentProduct.color,
+                backgroundColor: color,
                 zIndex: 2,
             }}
         >
@@ -34,7 +39,7 @@ const Footer = ({ currentProduct }) => {
                 <span
                     style={{
                         textTransform: "uppercase",
-                        color: "black",
+                        color: textColor,
                         fontWeight: 900,
                         fontSize: "6vw",
                     }}
@@ -43,7 +48,7 @@ const Footer = ({ currentProduct }) => {
                 </span>
                 <span
                     style={{
-                        color: "black",
+                        color: textColor,
                         fontSize: "5vw",
                     }}
                 >
@@ -53,7 +58,7 @@ const Footer = ({ currentProduct }) => {
             <button
                 style={{
                     backgroundColor: "#fff4",
-                    color: "black",
+                    color: 'black',
                     padding: "0.5rem 1rem",
                     borderRadius: "1vw",
                     cursor: "pointer",

@@ -6,9 +6,11 @@ import { ShoppingBagIcon } from "@heroicons/react/24/outline";
 import CategoryDropdown from "./CategoryDropdown";
 import categories from "@/data/categories";
 import { useColor } from "./Providers/ColorProvider";
+import { useRouter } from "next/router";
 
 const Header = ({}) => {
-    const { color, setColor } = useColor();
+    const router = useRouter();
+    const { color, setColor, textColor } = useColor();
 
     const [scrollPosition, setScrollPosition] = useState(0);
     const [visible, setVisible] = useState(true);
@@ -68,9 +70,9 @@ const Header = ({}) => {
                     justifyContent: "space-between",
                     alignItems: "center",
                     // paddingInline: "4vw",
-                    paddingBottom:'3vw',
+                    paddingBottom: "3vw",
                     background: color,
-                    paddingTop:'1vw',
+                    paddingTop: "1vw",
                     // gap: "1vw",
                 }}
             >
@@ -85,15 +87,41 @@ const Header = ({}) => {
                             borderRadius: "1vw",
                             cursor: "pointer",
                             paddingInline: "4vw",
-                            paddingBottom: '1vw',
+                            paddingBottom: "1vw",
                             display: "flex",
                             justifyContent: "center",
                         }}
                     >
-                        <Logo color={"black"} />
+                        <Logo color={textColor} />
                     </Link>
                 </div>
-                <CategoryDropdown categories={categories} />
+                {router.pathname.includes("shop") && (
+                    <CategoryDropdown categories={categories} />
+                )}
+                {!router.pathname.includes("shop") && (
+                    <Link
+                        style={{
+                            cursor: "pointer",
+                            background: "none",
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            border: "none",
+                            borderRadius: "1vw",
+                            color: textColor,
+                            height: "12vw",
+                            width: "100%",
+                            fontSize: "4vw",
+                            fontWeight: "500",
+                            zIndex: 11,
+                            textTransform: 'uppercase',
+                            paddingLeft: '30vw',
+                        }}
+                        href={'/shop'}
+                    >
+                        Shop
+                    </Link>
+                )}
                 <div
                     style={{
                         display: "flex",
@@ -116,7 +144,7 @@ const Header = ({}) => {
                             border: "none",
                         }}
                     >
-                        <ShoppingBagIcon color="black" height={"7vw"} />
+                        <ShoppingBagIcon color={textColor} height={"7vw"} />
                     </Link>
 
                     {/* <div
