@@ -96,8 +96,7 @@ const CategoryDropdown = ({ categories }) => {
                       {categories.map((category) => (
                             <Link
                                 key={category.slug}
-                                // href={`/shop/${category.slug}`}
-                                href='/demo'
+                                href={`/shop/${category.slug}`}
                                 passHref
                             >
                                 <div
