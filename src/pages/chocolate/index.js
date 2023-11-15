@@ -27,6 +27,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import Title from "@/components/Title";
 import DesktopContainer from "@/components/DesktopContainer";
+import Head from "next/head";
 
 function Chocolate() {
     const { setColor } = useColor();

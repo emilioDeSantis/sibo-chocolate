@@ -40,6 +40,7 @@ const Map2 = () => {
             top: "71%",
             title: "Talamanca",
             url: "/TALAMANCA.mp4",
+            poster: "/talt.png",
             content:
                 "Between the Talamanca Mountains and the Bananito River is a small farm that provides us with gorgeous beans, expertly fermented and dried by the Moore family. They also produce, vanilla, nutmeg and other tropical fruits and spices on the same farm. The family have been working in cacao for generations. Some of their trees are more than 40 years old, which means that we get some rare floral and herbal flavor notes that are lacking in the types of commercial cacao currently being planted throughout the Central American region. This cacao is used for our 70% Talamanca origin bar.",
         },
@@ -48,6 +49,7 @@ const Map2 = () => {
             top: "56%",
             title: "Turrialba",
             url: "/TURRIALBA.mp4",
+            poster: "/turt.png",
             content:
                 "Set near Guayabo National Park, an important archeological site for the indigenous Cabecar peoples, this gorgeous farm is a model for regenerative agriculture and agroforestry. Here, the third generation of the Rossi family has been producing award-winning cacao with strict quality standards that yields unmistakable fruity notes. Most of the cacao has been planted since 2019, selected for its organoleptic qualities. These include: TSH-565, citrus fruit and intense floral notes; CATIE R6, spices and a slight fruity acidity; ICS-95, citrus fruit with pronounced acidity. This cacao is used for our 70% Turrialba origin bar.",
         },
@@ -55,6 +57,7 @@ const Map2 = () => {
             left: "9%",
             top: "35%",
             title: "Huetar",
+            poster: "/cacaothumb.png",
             url: "/FINCA LA DORADA.mp4",
             content:
                 "Finca La Dorada has been producing award-winning beans since 2013 on its 90-acre property in the San Carlos region of Costa Rica. The Mejia family are proud to export beans to the European Union, and we are lucky to have them close by. Their agroforestry project aims to be a model for modern cacao production and frequently receives cacao producers from other regions in Costa Rica as well as other countries, to share their process and philosophy. Their cacao genetics include clones developed by Costa Rica’s Center for Tropical Agriculture (CATIE), which produces strong chocolate base with nutty flavor notes. This cacao is used for our 70% Huetar origin bar.",
@@ -66,6 +69,7 @@ const Map2 = () => {
             top: "72%",
             title: "Talamanca",
             url: "/TALAMANCA.mp4",
+            poster: "/talt.png",
             content:
                 "Between the Talamanca Mountains and the Bananito River is a small farm that provides us with gorgeous beans, expertly fermented and dried by the Moore family. They also produce, vanilla, nutmeg and other tropical fruits and spices on the same farm. The family have been working in cacao for generations. Some of their trees are more than 40 years old, which means that we get some rare floral and herbal flavor notes that are lacking in the types of commercial cacao currently being planted throughout the Central American region. This cacao is used for our 70% Talamanca origin bar.",
         },
@@ -74,6 +78,7 @@ const Map2 = () => {
             top: "57%",
             title: "Turrialba",
             url: "/TURRIALBA.mp4",
+            poster: "/turt.png",
             content:
                 "Set near Guayabo National Park, an important archeological site for the indigenous Cabecar peoples, this gorgeous farm is a model for regenerative agriculture and agroforestry. Here, the third generation of the Rossi family has been producing award-winning cacao with strict quality standards that yields unmistakable fruity notes. Most of the cacao has been planted since 2019, selected for its organoleptic qualities. These include: TSH-565, citrus fruit and intense floral notes; CATIE R6, spices and a slight fruity acidity; ICS-95, citrus fruit with pronounced acidity. This cacao is used for our 70% Turrialba origin bar.",
         },
@@ -82,6 +87,7 @@ const Map2 = () => {
             top: "36%",
             title: "Huetar",
             url: "/FINCA LA DORADA.mp4",
+            poster: "/cacaothumb.png",
             content:
                 "Finca La Dorada has been producing award-winning beans since 2013 on its 90-acre property in the San Carlos region of Costa Rica. The Mejia family are proud to export beans to the European Union, and we are lucky to have them close by. Their agroforestry project aims to be a model for modern cacao production and frequently receives cacao producers from other regions in Costa Rica as well as other countries, to share their process and philosophy. Their cacao genetics include clones developed by Costa Rica’s Center for Tropical Agriculture (CATIE), which produces strong chocolate base with nutty flavor notes. This cacao is used for our 70% Huetar origin bar.",
         },
@@ -210,7 +216,7 @@ const Map2 = () => {
                         {popup.url && (
                         <video
                             controls
-                            poster="/cacaothumb.png"
+                            poster={popup.poster}
                             style={{
                                 width: "100%",
                                 height: "auto",
