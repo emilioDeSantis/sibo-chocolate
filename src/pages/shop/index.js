@@ -14,49 +14,58 @@ import Categories from "@/components/Categories";
 
 export default function Shop({ collections }) {
     const { setCategories } = useCategories();
-    const {setColor} = useColor()
+    const { setColor } = useColor();
 
     useEffect(() => {
         setCategories(collections);
-        setColor('#100606')
+        setColor("#100606");
     }, []);
     return (
-        <Layout>
-            <main
-                style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    background: "#100606",
-                }}
-            >
-                <div
+        <>
+            <Head>
+                <title>SIBÖ CHOCOLATE | Chocolate Gifts</title>
+                <meta
+                    name="description"
+                    content="Buy Sibö Chocolate for delivery in the U.S. and Canada. Chocolate bars, chocolate coated nuts and fruit, fine truffles and caramels, hot chocolate mixes and more."
+                />
+            </Head>
+            <Layout>
+                <main
                     style={{
-                        textTransform: "uppercase",
-                        color: "#FFE9CF",
-                        fontWeight: 900,
-                        fontSize: "18vw",
-                        paddingInline: "3vw",
-                        marginTop: "26vw",
-                        lineHeight: "86%",
+                        display: "flex",
+                        flexDirection: "column",
+                        background: "#100606",
                     }}
                 >
-                    Shop
-                </div>
+                    <div
+                        style={{
+                            textTransform: "uppercase",
+                            color: "#FFE9CF",
+                            fontWeight: 900,
+                            fontSize: "18vw",
+                            paddingInline: "3vw",
+                            marginTop: "26vw",
+                            lineHeight: "86%",
+                        }}
+                    >
+                        Shop
+                    </div>
 
-                <div
-                    style={{
-                        color: "#FFE9CF",
-                        fontWeight: 300,
-                        fontSize: "4.6vw",
-                        paddingInline: "3vw",
-                        marginTop: "18vw",
-                        marginBottom: "0vw",
-                        lineHeight: "140%",
-                    }}
-                >
-                    Select a catagory to explore our assortment of chocolates.
-                </div>
-                {/* {collections.map((category) => (
+                    <div
+                        style={{
+                            color: "#FFE9CF",
+                            fontWeight: 300,
+                            fontSize: "4.6vw",
+                            paddingInline: "3vw",
+                            marginTop: "18vw",
+                            marginBottom: "0vw",
+                            lineHeight: "140%",
+                        }}
+                    >
+                        Select a catagory to explore our assortment of
+                        chocolates.
+                    </div>
+                    {/* {collections.map((category) => (
                     <Link
                         href={`/shop/${category.slug}`}
                         style={{
@@ -110,11 +119,12 @@ export default function Shop({ collections }) {
                     </Link>
                 ))} */}
 
-<Categories categories={collections} />
+                    <Categories categories={collections} />
 
-            <Bottom/>
-            </main>
-        </Layout>
+                    <Bottom />
+                </main>
+            </Layout>
+        </>
     );
 }
 

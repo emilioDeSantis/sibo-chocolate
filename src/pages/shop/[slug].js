@@ -34,7 +34,6 @@ const Category = ({ category }) => {
         }
     }, []);
 
-
     const [currentProduct, setCurrentProduct] = useState(category.products[0]);
     const productRefs = useRef([]);
 
@@ -87,126 +86,145 @@ const Category = ({ category }) => {
     if (!category) return null;
 
     return (
-        <Layout>
-            <div
-                style={{
-                    position: "relative",
-                }}
-            >
+        <>
+            <Head>
+                <title>SIBÖ CHOCOLATE | {category.name}</title>
+                <meta
+                    name="description"
+                    content={`Buy Sibö Chocolate's ${category.name} for delivery in the U.S. and Canada.`}
+                />
+            </Head>
+            <Layout>
                 <div
                     style={{
-                        position: "absolute",
-                        background: category.color,
-                        height: "100%",
-                        overflowY: "hidden",
-                        zIndex: -2,
+                        position: "relative",
                     }}
                 >
-                    {category.products.sort((a,b)=> (b.available_in_us == 'true' ? 1 : 0)-(a.available_in_us == 'true' ? 1 : 0)).map(() => (
-                        <>
-                            <Pattern1 color={category.pattern_color} />
-                            <Pattern1 color={category.pattern_color} />
-                            <Pattern1 color={category.pattern_color} />
-                            <Pattern1 color={category.pattern_color} />
-                            <Pattern1 color={category.pattern_color} />
-                            <Pattern1 color={category.pattern_color} />
-                            <Pattern1 color={category.pattern_color} />
-                            <Pattern1 color={category.pattern_color} />
-                            <Pattern1 color={category.pattern_color} />
-                            <Pattern1 color={category.pattern_color} />
-                        </>
-                    ))}
-                </div>
-                <Head>
-                    <title>{category.name}</title>
-                </Head>
-                <div
-                    style={{
-                        paddingTop: "25vw",
-                        paddingBottom: "0vw",
-                    }}
-                >
-                    <header
+                    <div
                         style={{
-                            display: "flex",
-                            justifyContent: "center",
-                            alignItems: "center",
+                            position: "absolute",
+                            background: category.color,
+                            height: "100%",
+                            overflowY: "hidden",
+                            zIndex: -2,
                         }}
                     >
-                        <div
+                        {category.products
+                            .sort(
+                                (a, b) =>
+                                    (b.available_in_us == "true" ? 1 : 0) -
+                                    (a.available_in_us == "true" ? 1 : 0)
+                            )
+                            .map(() => (
+                                <>
+                                    <Pattern1 color={category.pattern_color} />
+                                    <Pattern1 color={category.pattern_color} />
+                                    <Pattern1 color={category.pattern_color} />
+                                    <Pattern1 color={category.pattern_color} />
+                                    <Pattern1 color={category.pattern_color} />
+                                    <Pattern1 color={category.pattern_color} />
+                                    <Pattern1 color={category.pattern_color} />
+                                    <Pattern1 color={category.pattern_color} />
+                                    <Pattern1 color={category.pattern_color} />
+                                    <Pattern1 color={category.pattern_color} />
+                                </>
+                            ))}
+                    </div>
+                    <Head>
+                        <title>{category.name}</title>
+                    </Head>
+                    <div
+                        style={{
+                            paddingTop: "25vw",
+                            paddingBottom: "0vw",
+                        }}
+                    >
+                        <header
                             style={{
                                 display: "flex",
                                 justifyContent: "center",
-                                background: category.color,
-                                marginInline: "4vw",
-                                paddingTop: "3vw",
-                                paddingBottom: "1vw",
                                 alignItems: "center",
-                                // border: '1px solid white',
-                                width: "100%",
-                                borderRadius: "1vw",
-                                // background: 'white',
                             }}
                         >
                             <div
                                 style={{
-                                    textTransform: "uppercase",
-                                    fontSize: "12vw",
-                                    fontWeight: "900",
-                                    color: isDarkerThan50(category.color)
-                                        ? "white"
-                                        : "#551611",
-                                    letterSpacing: "0.08em",
-                                    textAlign: "center",
+                                    display: "flex",
+                                    justifyContent: "center",
+                                    background: category.color,
+                                    marginInline: "4vw",
+                                    paddingTop: "3vw",
+                                    paddingBottom: "1vw",
+                                    alignItems: "center",
+                                    // border: '1px solid white',
+                                    width: "100%",
+                                    borderRadius: "1vw",
+                                    // background: 'white',
                                 }}
                             >
-                                {category.name}
-                            </div>
-                        </div>
-                    </header>
-                </div>
-                <main
-                    style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center",
-                    }}
-                >
-                    {category.products.map((product, index) => {
-                        return (
-                            <div
-                                key={product.id}
-                                ref={(el) => (productRefs.current[index] = el)}
-                                data-id={product.id}
-                                data-name={product.name}
-                                data-description={product.description}
-                                data-price={product.price}
-                                data-color={product.color}
-                                data-weight={product.weight}
-                                data-cacao={product.cacao}
-                                data-available_in_us={product.available_in_us}
-                                data-chocolate_categories={
-                                    product.chocolate_categories
-                                }
-                                data-image={product.image}
-                                data-variantid={product.variantId}
-                            >
-                                <ProductCard
-                                    product={{
-                                        ...product,
-                                        index: index + 1,
-                                        totalProducts: category.products.length,
+                                <div
+                                    style={{
+                                        textTransform: "uppercase",
+                                        fontSize: "12vw",
+                                        fontWeight: "900",
+                                        color: isDarkerThan50(category.color)
+                                            ? "white"
+                                            : "#551611",
+                                        letterSpacing: "0.08em",
+                                        textAlign: "center",
                                     }}
-                                    category={category}
-                                />
+                                >
+                                    {category.name}
+                                </div>
                             </div>
-                        );
-                    })}
-                    <Bottom />
-                </main>
-            </div>
-            <Footer currentProduct={currentProduct} />
-            {/* <div
+                        </header>
+                    </div>
+                    <main
+                        style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                        }}
+                    >
+                        {category.products.map((product, index) => {
+                            return (
+                                <div
+                                    key={product.id}
+                                    ref={(el) =>
+                                        (productRefs.current[index] = el)
+                                    }
+                                    data-id={product.id}
+                                    data-name={product.name}
+                                    data-description={product.description}
+                                    data-price={product.price}
+                                    data-color={product.color}
+                                    data-weight={product.weight}
+                                    data-cacao={product.cacao}
+                                    data-available_in_us={
+                                        product.available_in_us
+                                    }
+                                    data-chocolate_categories={
+                                        product.chocolate_categories
+                                    }
+                                    data-image={product.image}
+                                    data-variantid={product.variantId}
+                                >
+                                    <ProductCard
+                                        product={{
+                                            ...product,
+                                            index: index + 1,
+                                            totalProducts:
+                                                category.products.length,
+                                        }}
+                                        category={category}
+                                    />
+                                </div>
+                            );
+                        })}
+                        <Bottom />
+                    </main>
+                </div>
+                <Footer currentProduct={currentProduct} />
+                {/* <div
                 style={{
                     position: "fixed",
                     top: "28vw",
@@ -250,7 +268,8 @@ const Category = ({ category }) => {
                     </button>
                 </div>
             </div> */}
-        </Layout>
+            </Layout>
+        </>
     );
 };
 
