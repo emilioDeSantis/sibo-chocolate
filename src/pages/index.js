@@ -53,7 +53,7 @@ import Map from "@/components/map";
 import Map2 from "@/components/Map2";
 import Graphic from "@/components/svg/Graphic";
 import Cutout from "@/components/svg/Cutout";
-import DesktopContainer from "@/components/DesktopContainer";
+import HomeDesktopContainer from "@/components/HomeDesktopContainer";
 import SimpleCategories from "@/components/SimpleCategories";
 // import categories from "@/data/categories";
 
@@ -186,7 +186,6 @@ const Home = ({ categories, products }) => {
         return () => clearTimeout(timeout);
     }, []);
 
-
     return (
         <Layout>
             <div
@@ -197,22 +196,22 @@ const Home = ({ categories, products }) => {
                 }}
             >
                 <video
-                    // className="hero"
+                    className="hero"
                     muted
                     autoPlay
                     loop
                     playsInline
                     controls={false}
-                    // style={{
-                    //     objectFit: "cover",
-                    //     width: `100%`,
-                    // }}
                     style={{
                         objectFit: "cover",
                         width: `100%`,
-                        height: `86vh`,
-                        marginTop: "12vw",
                     }}
+                    // style={{
+                    //     objectFit: "cover",
+                    //     width: `100%`,
+                    //     height: `86vh`,
+                    //     marginTop: "12vw",
+                    // }}
                 >
                     <source src="/hero.mp4" />
                 </video>
@@ -348,7 +347,7 @@ const Home = ({ categories, products }) => {
                     </div>
                 </div>
 
-                <DesktopContainer background={"#311d1c"}>
+                <HomeDesktopContainer background={"#311d1c"}>
                     <div
                         style={{
                             display: "flex",
@@ -422,9 +421,10 @@ const Home = ({ categories, products }) => {
                             <div
                                 style={{
                                     position: "relative",
-                                    width: "10rem",
-                                    height: "7rem",
-                                    border: "1px solid #ffffff99",
+                                    width: "clamp(8rem,24vw, 18rem)",
+                                    height: "clamp(8rem,24vw, 18rem)",
+                                    border: "0.7px solid #ffffff",
+                                    borderRadius: "100%",
                                     marginTop: "22rem",
                                 }}
                             >
@@ -432,10 +432,11 @@ const Home = ({ categories, products }) => {
                                     src={"/minimap.png"}
                                     alt="sky"
                                     fill
-                                    sizes="100vw"
+                                    sizes="30vw"
                                     priority
                                     style={{
                                         objectFit: "cover",
+                                        borderRadius: "100%",
                                     }}
                                 />
                             </div>
@@ -467,7 +468,8 @@ const Home = ({ categories, products }) => {
                                     top: "0",
                                     fontFamily: "pablo",
                                     color: "#311d1c",
-                                    fontSize: "12vw",
+                                    // fontSize: "12vw",
+                                    fontSize: "clamp(1rem, 12vw, 5rem)",
                                     paddingInline: "3vw",
                                     display: "flex",
                                     flexDirection: "column",
@@ -476,7 +478,7 @@ const Home = ({ categories, products }) => {
                                 <Link
                                     href="/chocolate"
                                     style={{
-                                        marginTop: "36vw",
+                                        marginTop: "clamp(1rem, 36vw, 21rem)",
                                     }}
                                 >
                                     Fresh from the Source ⟹
@@ -484,8 +486,8 @@ const Home = ({ categories, products }) => {
                                 <Link
                                     href="/wellness"
                                     style={{
-                                        marginTop: "52vw",
-                                        marginLeft: "24vw",
+                                        marginTop: "clamp(1rem, 52vw, 30rem)",
+                                        marginLeft: "clamp(1rem, 24vw, 12rem",
                                     }}
                                 >
                                     Better for You ⟹
@@ -493,8 +495,8 @@ const Home = ({ categories, products }) => {
                                 <Link
                                     href="/sustainability"
                                     style={{
-                                        marginTop: "48vw",
-                                        marginLeft: "6vw",
+                                        marginTop: "clamp(1rem, 48vw, 28rem)",
+                                        marginLeft: "clamp(1rem, 6vw, 4rem)",
                                     }}
                                 >
                                     Better for the Planet ⟹
@@ -511,10 +513,10 @@ const Home = ({ categories, products }) => {
                                 alignItems: "center",
                                 justifyContent: "center",
                                 fontWeight: 900,
-                                fontSize: "8vw",
+                                fontSize: "1.8rem",
                                 lineHeight: "100%",
                                 marginInline: "3vw",
-                                marginTop: "16vw",
+                                marginTop: "3.6rem",
                             }}
                         >
                             Not all chocolate is created equal.
@@ -527,11 +529,11 @@ const Home = ({ categories, products }) => {
                                 alignItems: "center",
                                 justifyContent: "center",
                                 fontWeight: 400,
-                                fontSize: "5vw",
+                                fontSize: "1.1rem",
                                 lineHeight: "169%",
                                 marginInline: "3vw",
-                                marginTop: "10vw",
-                                marginBottom: "4vw",
+                                marginTop: "2.4rem",
+                                marginBottom: "1rem",
                                 zIndex: 2,
                             }}
                         >
@@ -622,6 +624,7 @@ const Home = ({ categories, products }) => {
                             }}
                         >
                             <div
+                                className="mobile"
                                 style={{
                                     marginTop: "-0.25rem",
                                     // zIndex: 2,
@@ -650,8 +653,8 @@ const Home = ({ categories, products }) => {
                             categories={categories}
                         ></SimpleCategories>
                     </div>
-                    <Bottom />
-                </DesktopContainer>
+                </HomeDesktopContainer>
+                <Bottom />
             </div>
         </Layout>
     );

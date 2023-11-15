@@ -39,6 +39,7 @@ const Map2 = () => {
             left: "68%",
             top: "71%",
             title: "Talamanca",
+            url: "/TALAMANCA.mp4",
             content:
                 "Between the Talamanca Mountains and the Bananito River is a small farm that provides us with gorgeous beans, expertly fermented and dried by the Moore family. They also produce, vanilla, nutmeg and other tropical fruits and spices on the same farm. The family have been working in cacao for generations. Some of their trees are more than 40 years old, which means that we get some rare floral and herbal flavor notes that are lacking in the types of commercial cacao currently being planted throughout the Central American region. This cacao is used for our 70% Talamanca origin bar.",
         },
@@ -46,6 +47,7 @@ const Map2 = () => {
             left: "48%",
             top: "56%",
             title: "Turrialba",
+            url: "/TURRIALBA.mp4",
             content:
                 "Set near Guayabo National Park, an important archeological site for the indigenous Cabecar peoples, this gorgeous farm is a model for regenerative agriculture and agroforestry. Here, the third generation of the Rossi family has been producing award-winning cacao with strict quality standards that yields unmistakable fruity notes. Most of the cacao has been planted since 2019, selected for its organoleptic qualities. These include: TSH-565, citrus fruit and intense floral notes; CATIE R6, spices and a slight fruity acidity; ICS-95, citrus fruit with pronounced acidity. This cacao is used for our 70% Turrialba origin bar.",
         },
@@ -63,6 +65,7 @@ const Map2 = () => {
             left: "62%",
             top: "72%",
             title: "Talamanca",
+            url: "/TALAMANCA.mp4",
             content:
                 "Between the Talamanca Mountains and the Bananito River is a small farm that provides us with gorgeous beans, expertly fermented and dried by the Moore family. They also produce, vanilla, nutmeg and other tropical fruits and spices on the same farm. The family have been working in cacao for generations. Some of their trees are more than 40 years old, which means that we get some rare floral and herbal flavor notes that are lacking in the types of commercial cacao currently being planted throughout the Central American region. This cacao is used for our 70% Talamanca origin bar.",
         },
@@ -70,6 +73,7 @@ const Map2 = () => {
             left: "49%",
             top: "57%",
             title: "Turrialba",
+            url: "/TURRIALBA.mp4",
             content:
                 "Set near Guayabo National Park, an important archeological site for the indigenous Cabecar peoples, this gorgeous farm is a model for regenerative agriculture and agroforestry. Here, the third generation of the Rossi family has been producing award-winning cacao with strict quality standards that yields unmistakable fruity notes. Most of the cacao has been planted since 2019, selected for its organoleptic qualities. These include: TSH-565, citrus fruit and intense floral notes; CATIE R6, spices and a slight fruity acidity; ICS-95, citrus fruit with pronounced acidity. This cacao is used for our 70% Turrialba origin bar.",
         },

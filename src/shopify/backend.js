@@ -295,6 +295,9 @@ export const fetchFeaturedProducts = async () => {
                 available_in_us: metafield(namespace: "custom", key: "available_in_us") {
                   value
                 }
+                nameAndCategory: metafield(namespace: "custom", key: "nameAndCategory") {
+                  value
+                }
                 variants(first: 1) {
                   edges {
                     node {
@@ -338,6 +341,7 @@ export const fetchFeaturedProducts = async () => {
                     collection: collectionTitle, // Include the collection title in the product data
                     id: product.id,
                     name: product.title,
+                    nameAndCategory: product.nameAndCategory? product.nameAndCategory.value : null,
                     handle: product.handle,
                     variantId: Buffer.from(
                         product.variants.edges[0].node.id
@@ -349,7 +353,6 @@ export const fetchFeaturedProducts = async () => {
         });
     });
 
-    console.log(featuredProducts);
 
     return featuredProducts;
 };

@@ -42,13 +42,13 @@ const FeaturedProducts = ({ products }) => {
                     <Link
                     href={`/shop/${product.collection}/#${product.name}`}
                         key={product.id}
-                        style={{ flex: "0 0 auto", width: "6rem" }}
+                        style={{ flex: "0 0 auto", width: "9rem" }}
                     >
                         <div
                             style={{
                                 position: "relative",
-                                width: "6rem",
-                                height: "6rem",
+                                width: "9rem",
+                                height: "9rem",
                                 borderRadius: "50%",
                                 overflow: "hidden",
                             }}
@@ -63,12 +63,12 @@ const FeaturedProducts = ({ products }) => {
                         <p
                             style={{
                                 marginTop: "1rem",
-                                fontSize: "1rem",
+                                fontSize: ".96rem",
                                 color: "#bb8877",
-                                fontWeight: 700,
+                                fontWeight: 600,
                             }}
                         >
-                            {product.name.split(" in ")[0]}
+                            {product.nameAndCategory ? product.nameAndCategory : product.name}
                         </p>
                     </Link>
                 ))}

@@ -19,7 +19,7 @@ const ParallaxComponent = ({ marginTop, children, scrollSpeed }) => (
                 transformOrigin: "top",
                 WebkitTransformOrigin: "top",
                 zIndex: -1,
-                width: "100vw",
+                width: "100%",
                 // height:'160vh',
             }}
         >

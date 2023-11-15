@@ -14,8 +14,8 @@ const SimpleCategories = ({ categories }) => {
                         textTransform: "uppercase",
                         color: "#f3ce99", // You can change the color as you like
                         fontWeight: 900,
-                        fontSize: "2.7rem", // You can adjust the font size as needed
-                        margin: "1rem 0",
+                        fontSize: "1.4rem", // You can adjust the font size as needed
+                        margin: "2rem 0",
                         display: "block", 
                         lineHeight: "86%",
                     }}

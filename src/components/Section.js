@@ -1,71 +1,10 @@
-// import React from 'react';
-// import Swatch2 from "@/components/svg/Swatch2";
-// import Image from "next/image";
-// import ParallaxComponent from '@/pages/ParallaxComponent';
-
-// const Section = ({backgroundColor, textColor, title, children, imageUrl}) => (
-//     <React.Fragment>
-//         <ParallaxComponent marginTop={"85vw"} scrollSpeed={1}>
-//             <Swatch2 color={backgroundColor} />
-//             <div
-//                 style={{
-//                     paddingInline: "3vw",
-//                     height: "1000vw",
-//                 }}
-//             >
-//                 <div
-//                     style={{
-//                         fontSize: "21vw",
-//                         color: textColor,
-//                         fontWeight: "900",
-//                         textTransform: "uppercase",
-//                         lineHeight: "86%",
-//                     }}
-//                 >
-//                     {title}
-//                 </div>
-//                 <div
-//                     style={{
-//                         marginTop: "10vw",
-//                         fontSize: "5vw",
-//                         color: textColor,
-//                         lineHeight: "147%",
-//                     }}
-//                 >
-//                     {children}
-//                 </div>
-//             </div>
-//         </ParallaxComponent>
-//         <ParallaxComponent marginTop={"0vw"} scrollSpeed={0.8}>
-//             <div
-//                 style={{
-//                     position: "relative",
-//                     width: "100vw",
-//                     height: "70vw",
-//                 }}
-//             >
-//                 <Image
-//                     src={imageUrl}
-//                     alt="sky"
-//                     fill
-//                     sizes="100vw"
-//                     priority
-//                     style={{
-//                         objectFit: "cover",
-//                     }}
-//                 />
-//             </div>
-//         </ParallaxComponent>
-//     </React.Fragment>
-// )
-
-// export default Section;
-
 import React, { useEffect, useRef } from "react";
 import Swatch2 from "@/components/svg/Swatch2";
 import Image from "next/image";
 import ParallaxComponent from "@/pages/ParallaxComponent";
 import { useColor } from "./Providers/ColorProvider";
+import Swatch2Top from "./svg/Swatch2Top";
+import Swatch2Bottom from "./svg/Swatch2Bottom";
 
 const Section = ({
     backgroundColor,
@@ -74,8 +13,8 @@ const Section = ({
     children,
     imageUrl,
     imageHeight,
+    aspectRatio,
     isHeader,
-    noSwatch,
 }) => {
     const { color, setColor } = useColor();
 
@@ -116,202 +55,97 @@ const Section = ({
         <div
             ref={sectionRef}
             style={{
-                position: "relative",
+                // position: "relative",
+                display: "flex",
+                flexDirection: "column",
+                width: "100%",
+                marginTop: isHeader ? '4rem' : "clamp(-9rem,-30vw,0rem)",
+                // marginTop: '4rem',
             }}
         >
             {imageUrl && (
                 <div
                     style={{
-                        position: "absolute",
-                        top: 0,
-                        right: 0,
-                        left: 0,
+                        position: "relative",
+                        width: "100%",
+                        // height: imageHeight,
+                        aspectRatio: aspectRatio,
                         zIndex: -1,
-                        width: "100vw",
                     }}
                 >
-                    <div
+                    <Image
+                        src={imageUrl}
+                        alt="sky"
+                        fill
+                        sizes="100vw"
+                        priority
                         style={{
-                            position: "relative",
-                            width: "100vw",
-                            height: imageHeight,
-                            marginTop: !noSwatch ? "0vw" : "25vw",
+                            objectFit: "cover",
                         }}
-                    >
-                        <Image
-                            src={imageUrl}
-                            alt="sky"
-                            fill
-                            sizes="100vw"
-                            priority
-                            style={{
-                                objectFit: "cover",
-                            }}
-                        />
-                    </div>
+                    />
                 </div>
             )}
             <div
                 style={{
-                    marginBottom: "-26vw",
+                    marginTop: "-13vw",
+                    marginTop: "clamp(-7rem,-13vw,0rem)",
+                    display: "flex",
+                    flexDirection: "column",
+                    marginBottom: "-1px",
                 }}
             >
-                <div
-                    style={{
-                        height: !noSwatch
-                            ? `calc(${imageHeight} - 30vw)`
-                            : `calc(${imageHeight} - 5vw)`,
-                    }}
-                ></div>
-                {!noSwatch && <Swatch2 color={backgroundColor} />}
-                <div
-                    style={{
-                        backgroundColor: backgroundColor,
-                        paddingInline: "3vw",
-                        marginTop: !noSwatch ? "-58vw" : "10vw",
-                        position: "relative",
-                        zIndex: 2,
-                        paddingTop: !noSwatch ? 0 : "6vw",
-                        paddingBottom: !noSwatch ? 0 : "12vw",
-                    }}
-                >
-                    {title && (
-                        <div
-                            style={{
-                                fontSize: isHeader ? "20vw" : "13vw",
-                                color: textColor,
-                                // fontWeight: "900",
-                                // textTransform: "uppercase",
-                                // lineHeight: "140%",
-                                marginBottom: "5vw",
-                                marginTop: "5vw",
-                                fontFamily: "pablo",
-                            }}
-                        >
-                            {title}
-                        </div>
-                    )}
+                <Swatch2Top color={backgroundColor} />
+            </div>
+            <div
+                style={{
+                    backgroundColor: backgroundColor,
+                    paddingInline: "3vw",
+                    paddingTop: "1rem",
+                    paddingBottom: "1.8rem",
+                    // marginTop: "clamp(-100rem,-56vw,0rem)",
+                    position: "relative",
+                    zIndex: 2,
+                }}
+            >
+                {title && (
                     <div
                         style={{
-                            fontSize: "5vw",
+                            fontSize: isHeader ? "4.8rem" : "3.2rem",
                             color: textColor,
-                            lineHeight: "147%",
-                            display: "flex",
-                            flexDirection: "column",
-                            gap: "5vw",
+                            // fontWeight: "900",
+                            // textTransform: "uppercase",
+                            // lineHeight: "140%",
+                            paddingBlock: "1rem",
+                            marginBlock: "0.2rem",
+                            fontFamily: "pablo",
                         }}
                     >
-                        {children}
+                        {title}
                     </div>
-                </div>
+                )}
                 <div
                     style={{
-                        marginTop: !noSwatch ? "-45vw" : "-30vw",
-                        width: "100%",
-                        position: "relative",
-                        zIndex: 0,
+                        fontSize: "1.2rem",
+                        color: textColor,
+                        lineHeight: "147%",
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "1.2rem",
                     }}
                 >
-                    {!noSwatch && <Swatch2 color={backgroundColor} />}
+                    {children}
                 </div>
             </div>
-        </div>
-    );
-
-    return (
-        <div
-            ref={sectionRef}
-            style={{
-                position: "relative",
-            }}
-        >
-            {imageUrl && (
-                <ParallaxComponent
-                    marginTop={!noSwatch ? "0vw" : "25vw"}
-                    scrollSpeed={0.8}
-                >
-                    <div
-                        style={{
-                            position: "relative",
-                            width: "100vw",
-                            height: imageHeight,
-                        }}
-                    >
-                        <Image
-                            src={imageUrl}
-                            alt="sky"
-                            fill
-                            sizes="100vw"
-                            priority
-                            style={{
-                                objectFit: "cover",
-                            }}
-                        />
-                    </div>
-                </ParallaxComponent>
-            )}
             <div
                 style={{
-                    marginBottom: "-26vw",
+                    marginTop: "-1px",
+                    // marginTop: "clamp(-100rem,-48vw,-2rem)",
+                    width: "100%",
+                    position: "relative",
+                    zIndex: 0,
                 }}
             >
-                <div
-                    style={{
-                        height: !noSwatch
-                            ? `calc(${imageHeight} - 30vw)`
-                            : `calc(${imageHeight} - 5vw)`,
-                    }}
-                ></div>
-                {!noSwatch && <Swatch2 color={backgroundColor} />}
-                <div
-                    style={{
-                        backgroundColor: backgroundColor,
-                        paddingInline: "3vw",
-                        marginTop: !noSwatch ? "-58vw" : "10vw",
-                        position: "relative",
-                        zIndex: 2,
-                        paddingTop: !noSwatch ? 0 : "6vw",
-                        paddingBottom: !noSwatch ? 0 : "12vw",
-                    }}
-                >
-                    {title && (
-                        <div
-                            style={{
-                                fontSize: isHeader ? "13vw" : "8vw",
-                                color: textColor,
-                                fontWeight: "900",
-                                textTransform: "uppercase",
-                                lineHeight: "140%",
-                                marginBottom: "5vw",
-                                marginTop: "5vw",
-                            }}
-                        >
-                            {title}
-                        </div>
-                    )}
-                    <div
-                        style={{
-                            fontSize: "5vw",
-                            color: textColor,
-                            lineHeight: "147%",
-                            display: "flex",
-                            flexDirection: "column",
-                            gap: "5vw",
-                        }}
-                    >
-                        {children}
-                    </div>
-                </div>
-                <div
-                    style={{
-                        marginTop: !noSwatch ? "-45vw" : "-30vw",
-                        width: "100%",
-                        position: "relative",
-                        zIndex: 0,
-                    }}
-                >
-                    {!noSwatch && <Swatch2 color={backgroundColor} />}
-                </div>
+                <Swatch2Bottom color={backgroundColor} />
             </div>
         </div>
     );
