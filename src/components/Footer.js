@@ -7,8 +7,7 @@ import { useLocation } from "./Providers/LocationProvider";
 const Footer = ({ currentProduct }) => {
     const [checkout, setCheckout] = useState(null);
     const { triggerBagUpdate } = useBagUpdate();
-    const {location} = useLocation()
-
+    const { location } = useLocation();
 
     // State to manage the display of the notification
     const [showNotification, setShowNotification] = useState(false);
@@ -16,7 +15,7 @@ const Footer = ({ currentProduct }) => {
     // Initialize a new checkout or use existing one
     useEffect(() => {
         const existingCheckoutId = localStorage.getItem("checkoutId");
-        
+
         if (existingCheckoutId) {
             client.checkout
                 .fetch(existingCheckoutId)
@@ -30,7 +29,8 @@ const Footer = ({ currentProduct }) => {
                     // localStorage.removeItem("checkoutId");
                 });
         } else {
-            client.checkout.create()
+            client.checkout
+                .create()
                 .then((newCheckout) => {
                     localStorage.setItem("checkoutId", newCheckout.id);
                     setCheckout(newCheckout);
@@ -40,18 +40,15 @@ const Footer = ({ currentProduct }) => {
                     console.error("Error creating new checkout:", error);
                 });
         }
-        console.log('checkout',checkout);
+        console.log("checkout", checkout);
     }, []);
-    
 
     useEffect(() => {
         console.log(currentProduct.available_in_us);
     }, [currentProduct.available_in_us]);
 
-
-
     const handleAddToBag = () => {
-        console.log('currnetyfpri',checkout);
+        console.log("currnetyfpri", checkout);
         if (!currentProduct || !checkout) return;
 
         const lineItemsToAdd = [
@@ -73,7 +70,7 @@ const Footer = ({ currentProduct }) => {
                 // Hide the notification after 3 seconds
                 setTimeout(() => {
                     setShowNotification(false);
-                },1000);
+                }, 1000);
             });
     };
 
@@ -92,7 +89,8 @@ const Footer = ({ currentProduct }) => {
                 flexDirection: "column",
                 justifyContent: "space-between",
                 alignItems: "center",
-                padding: "4vw",
+                padding: "1rem",
+                paddingInline: "5vw",
                 backgroundColor: color,
                 zIndex: 2,
             }}
@@ -101,17 +99,17 @@ const Footer = ({ currentProduct }) => {
                 <div
                     style={{
                         position: "fixed",
-                        top: "40vw",
+                        top: "12rem",
                         left: "50%",
                         transform: "translateX(-50%)",
                         background: "#fff",
                         color: "#310",
-                        padding: "5vw 10vw",
+                        padding: "1.2rem 2.4rem",
                         zIndex: 3, // ensure it's above other elements
                         opacity: 1,
                         transition: "opacity 0.3s",
-                        fontSize: "6vw",
-                        width: "80vw",
+                        fontSize: "1.5rem",
+                        width: "20rem",
                         // border: '5px solid #221409',
                         boxShadow: "0 3px 40px #321",
                         fontWeight: 600,
@@ -127,7 +125,7 @@ const Footer = ({ currentProduct }) => {
                     justifyContent: "space-between",
                     alignItems: "center",
                     width: "100%",
-                    marginBottom: "2vw",
+                    marginBottom: "0.5rem",
                 }}
             >
                 <span
@@ -135,7 +133,7 @@ const Footer = ({ currentProduct }) => {
                         textTransform: "uppercase",
                         color: textColor,
                         fontWeight: 900,
-                        fontSize: "6vw",
+                        fontSize: "1.4rem",
                     }}
                 >
                     {currentProduct.name}
@@ -143,12 +141,11 @@ const Footer = ({ currentProduct }) => {
                 <span
                     style={{
                         color: textColor,
-                        fontSize: "5vw",
+                        fontSize: "1.2rem",
                     }}
                 >
                     {/* {location =='us' ? '$' : "₡"}{location =='us' ? currentProduct.price : Math.floor(currentProduct.price)} */}
                     ${parseFloat(currentProduct.price).toFixed(2)}
-
                 </span>
             </div>
             {currentProduct.available_in_us != "true" && (
@@ -156,10 +153,10 @@ const Footer = ({ currentProduct }) => {
                     style={{
                         color: textColor,
                         fontWeight: 600,
-                        fontSize: "5vw",
+                        fontSize: "1.2rem",
                         width: "100%",
-                        marginBottom: "4vw",
-                        marginTop: "-2vw",
+                        marginBottom: "1rem",
+                        marginTop: "-0.5rem",
                         opacity: 0.8,
                     }}
                 >{`*Available in Costa Rica Only`}</p>
@@ -169,17 +166,17 @@ const Footer = ({ currentProduct }) => {
                     backgroundColor: showNotification ? "#0006" : "#fff4",
                     color: showNotification ? "white" : textColor,
                     padding: "0.5rem 1rem",
-                    borderRadius: "1vw",
+                    borderRadius: "5px",
                     cursor: "pointer",
                     border: "none",
-                    width: "100%",
-                    height: "11vw",
+                    width: "18rem",
+                    height: "2.5rem",
                     textTransform: "uppercase",
-                    fontSize: "5vw",
+                    fontSize: "1.2rem",
                     fontWeight: "500",
                     letterSpacing: "0.05em",
                     boxShadow: "0 2px 6px #3217",
-                    fontWeight:600,
+                    fontWeight: 600,
                 }}
                 onClick={handleAddToBag}
             >

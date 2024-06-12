@@ -11,8 +11,8 @@ const Categories = ({ categories }) => {
                 key={category.slug}
                     href={`/shop/${category.slug}`}
                     style={{
-                        marginTop: "2vw",
-                        marginBottom: "2vw",
+                        marginTop: "0.5rem",
+                        marginBottom: "0.5rem",
                     }}
                 >
                     <div
@@ -28,7 +28,7 @@ const Categories = ({ categories }) => {
                             textTransform: "uppercase",
                             color: "#FFD79A",
                             fontWeight: 900,
-                            fontSize: "9vw",
+                            fontSize: "2rem",
                             paddingInline: "3vw",
                             position: "absolute",
                             zIndex: 1,

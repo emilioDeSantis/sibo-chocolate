@@ -21,24 +21,24 @@ const Bottom = () => {
         >
             <div
                 style={{
-                    width: "30vw",
-                    height: "15vw",
-                    marginBottom: "5vw",
-                    marginTop: "10vw",
+                    width: "8rem",
+                    height: "4rem",
+                    marginBottom: "2rem",
+                    marginTop: "2rem",
                 }}
             >
                 <Logo color="#FFECB3" />
             </div>
 
-            <div style={{ marginBottom: "6vw" }}>
-                <h2 style={{ color: "#FFF8E1", fontSize: "6vw" }}>
+            <div style={{ marginBottom: "1.5rem" }}>
+                <h2 style={{ color: "#FFF8E1", fontSize: "1.4rem" }}>
                     Contact Us
                 </h2>
-                <p style={{ fontSize: "4.5vw" }}>
+                <p style={{ fontSize: "1.1rem" }}>
                     San Isidro de Heredia: +(506) 22681335
                 </p>
-                <p style={{ fontSize: "4.5vw" }}>Escazú: +(506) 22899010</p>
-                <p style={{ fontSize: "4.5vw" }}>
+                <p style={{ fontSize: "1.1rem" }}>Escazú: +(506) 22899010</p>
+                <p style={{ fontSize: "1.1rem" }}>
                     Email:{" "}
                     <a
                         href="mailto:info@sibochocolate.com"
@@ -49,33 +49,32 @@ const Bottom = () => {
                 </p>
             </div>
 
-            <div style={{ marginBottom: "7vw", textAlign: "center" }}>
-                <h2 style={{ color: "#FFF8E1", fontSize: "6vw" }}>
+            <div style={{ marginBottom: "2rem", textAlign: "center" }}>
+                <h2 style={{ color: "#FFF8E1", fontSize: "1.4rem" }}>
                     Newsletter Signup
                 </h2>
                 <input
                     type="email"
                     placeholder="Enter your email..."
                     style={{
-                        padding: "3vw",
-                        margin: "3vw 0",
+                        padding: "0.7rem",
+                        margin: "0.7rem 0",
                         width: "90%",
                         backgroundColor: "#4E342E",
                         border: "none",
                         borderRadius: "8px",
-                        fontSize: "4vw",
                         color: "#FFECB3",
                     }}
                 />
                 <button
                     style={{
                         display: "block",
-                        margin: "3vw auto",
-                        padding: "3vw 6vw",
+                        margin: "0.7rem auto",
+                        padding: "0.7rem 1.5rem",
                         backgroundColor: "#6D4C41",
                         border: "none",
                         borderRadius: "8px",
-                        fontSize: "4.5vw",
+                        fontSize: "1.1rem",
                         color: "#FFD180",
                         cursor: "pointer",
                     }}
@@ -90,10 +89,10 @@ const Bottom = () => {
                     display: "flex",
                     justifyContent: "space-between",
                     flexWrap: "wrap",
-                    marginBottom: "6vw",
-                    fontSize: "4vw",
+                    marginBottom: "2rem",
+                    fontSize: "1rem",
                     textTransform: "uppercase",
-                    gap: "2vw",
+                    gap: "0.4rem",
                 }}
             >
                 <Link href="/">Home</Link> | 
@@ -106,7 +105,7 @@ const Bottom = () => {
                 <Link href="/reviews">Reviews</Link>
             </div>
 
-            <p style={{ fontSize: "3.5vw", marginBottom: "36vw" }}>
+            <p style={{ fontSize: "0.8rem", marginBottom: "3rem" }}>
                 © 2023 SIBO Chocolate Costa Rica. All rights reserved.
             </p>
         </div>

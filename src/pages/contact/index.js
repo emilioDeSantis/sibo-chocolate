@@ -21,140 +21,131 @@ const Contact = () => {
                 />
             </Head>
             <Layout>
-                <div
-                    style={{
-                        width: "100%",
-                        height: "88vh",
-                        padding: "3vw",
-                        backgroundColor: "#301d18",
-                        color: "#faf2ed",
-                        position: "relative",
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "flex-start",
-                        justifyContent: "center",
-                    }}
-                >
                     <div
                         style={{
-                            marginInline: "-3vw",
-                            marginBottom: "-20vw",
-                            marginTop: "18vw",
-                        }}
-                    >
-                        <Pattern2 color={"#55332399"} />
-                    </div>
-                    <h1
-                        style={{
-                            fontSize: "12vw",
-                            textTransform: "uppercase",
-                            fontWeight: 900,
-                            marginBottom: "8vw",
-                        }}
-                    >
-                        Contact Us
-                    </h1>
-
-                    <p
-                        style={{
-                            fontSize: "5vw",
-                            color: "#b87",
-                            fontWeight: 600,
-                        }}
-                    >
-                        Email:{" "}
-                        <a
-                            href="mailto:info@sibochocolate.com"
-                            style={{ color: "#faf2ed", fontWeight: 400 }}
-                        >
-                            info@sibochocolate.com
-                        </a>
-                    </p>
-
-                    <div style={{ marginBottom: "6vw", textAlign: "left" }}>
-                        <h3
-                            style={{
-                                fontSize: "6vw",
-                                // marginBottom: "1vw",
-                                marginTop: "5vw",
-                            }}
-                        >
-                            Shop & Tours
-                        </h3>
-                        <p style={{ fontSize: "5vw", color: "#faf2ed99" }}>
-                            San Isidro de Heredia, Costa Rica
-                        </p>
-                        <p style={{ fontSize: "5vw", color: "#faf2edcc" }}>
-                            +(506) 22899010
-                        </p>
-                        <h3
-                            style={{
-                                fontSize: "6vw",
-                                // marginBottom: "1vw",
-                                marginTop: "5vw",
-                            }}
-                        >
-                            Factory & Shop
-                        </h3>
-                        <p style={{ fontSize: "5vw", color: "#faf2ed99" }}>
-                            Plaza Itskatzu, Escazú, Costa Rica
-                        </p>
-                        <p style={{ fontSize: "5vw", color: "#faf2edcc" }}>
-                            +(506) 22681335
-                        </p>
-                    </div>
-                    <div
-                        style={{
-                            width: "100%",
-                            marginTop: "2vw",
+                            maxWidth: "100%",
+                            paddingInline: "7vw",
+                            paddingTop: "6rem",
+                            backgroundColor: "#301d18",
+                            color: "#faf2ed",
+                            position: "relative",
                             display: "flex",
+                            flexDirection: "column",
+                            alignItems: "flex-start",
                             justifyContent: "center",
                         }}
                     >
-                        <SocialLinks />
-                    </div>
-
-                    <div
-                        style={{
-                            marginBottom: "7vw",
-                            textAlign: "center",
-                            width: "100%",
-                        }}
-                    >
-                        <h2 style={{ color: "#b87", fontSize: "6vw" }}>
-                            Newsletter Signup
-                        </h2>
-                        <input
-                            type="email"
-                            placeholder="Enter your email..."
+                        <h1
                             style={{
-                                padding: "3vw",
-                                margin: "3vw 0",
-                                width: "90%",
-                                backgroundColor: "#EFEFEF55",
-                                border: "2px solid #DDD4",
-                                borderRadius: "8px",
-                                fontSize: "4vw",
-                                color: "#333",
-                            }}
-                        />
-                        <button
-                            style={{
-                                display: "block",
-                                margin: "3vw auto",
-                                padding: "2vw 4vw",
-                                backgroundColor: "#b87",
-                                border: "none",
-                                borderRadius: "8px",
-                                fontSize: "4vw",
-                                color: "#FFF",
-                                cursor: "pointer",
+                                fontSize: "2.8rem",
+                                textTransform: "uppercase",
+                                fontWeight: 900,
+                                marginBottom: "2rem",
                             }}
                         >
-                            Subscribe
-                        </button>
+                            Contact Us
+                        </h1>
+
+                        <p
+                            style={{
+                                fontSize: "1.2rem",
+                                color: "#b87",
+                                fontWeight: 600,
+                            }}
+                        >
+                            Email:{" "}
+                            <a
+                                href="mailto:info@sibochocolate.com"
+                                style={{ color: "#faf2ed", fontWeight: 400 }}
+                            >
+                                info@sibochocolate.com
+                            </a>
+                        </p>
+
+                        <div style={{ marginBottom: "1.4rem", textAlign: "left" }}>
+                            <h3
+                                style={{
+                                    fontSize: "1.5rem",
+                                    // marginBottom: "1vw",
+                                    marginTop: "1.2rem",
+                                }}
+                            >
+                                Shop & Tours
+                            </h3>
+                            <p style={{ fontSize: "1.2rem", color: "#faf2ed99" }}>
+                                San Isidro de Heredia, Costa Rica
+                            </p>
+                            <p style={{ fontSize: "1.2rem", color: "#faf2edcc" }}>
+                                +(506) 22899010
+                            </p>
+                            <h3
+                                style={{
+                                    fontSize: "1.5rem",
+                                    // marginBottom: "1vw",
+                                    marginTop: "1.2rem",
+                                }}
+                            >
+                                Factory & Shop
+                            </h3>
+                            <p style={{ fontSize: "1.2rem", color: "#faf2ed99" }}>
+                                Plaza Itskatzu, Escazú, Costa Rica
+                            </p>
+                            <p style={{ fontSize: "1.2rem", color: "#faf2edcc" }}>
+                                +(506) 22681335
+                            </p>
+                        </div>
+                        <div
+                            style={{
+                                width: "100%",
+                                marginTop: "0.5rem",
+                                display: "flex",
+                                justifyContent: "center",
+                            }}
+                        >
+                            <SocialLinks />
+                        </div>
+
+                        <div
+                            style={{
+                                marginBottom: "2rem",
+                                textAlign: "center",
+                                width: "100%",
+                            }}
+                        >
+                            <h2 style={{ color: "#b87", fontSize: "1.5rem" }}>
+                                Newsletter Signup
+                            </h2>
+                            <input
+                                type="email"
+                                placeholder="Enter your email..."
+                                style={{
+                                    padding: "0.7rem",
+                                    margin: "0.7rem 0",
+                                    width: "18rem",
+                                    backgroundColor: "#EFEFEF55",
+                                    border: "2px solid #DDD4",
+                                    borderRadius: "8px",
+                                    fontSize: "1rem",
+                                    color: "#333",
+                                }}
+                            />
+                            <button
+                                style={{
+                                    display: "block",
+                                    margin: "0.7rem auto",
+                                    padding: "0.7rem 1rem",
+                                    backgroundColor: "#b87",
+                                    border: "none",
+                                    borderRadius: "8px",
+                                    fontSize: "1rem",
+                                    color: "#FFF",
+                                    cursor: "pointer",
+                                }}
+                            >
+                                Subscribe
+                            </button>
+                        </div>
                     </div>
-                </div>
             </Layout>
         </>
     );

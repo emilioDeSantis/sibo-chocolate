@@ -7,6 +7,7 @@ import Swatch2 from "@/components/svg/Swatch2";
 import Review from "@/components/Review";
 import Bottom from "@/components/Bottom";
 import Head from "next/head";
+import DesktopContainer from "@/components/DesktopContainer";
 
 function Tour() {
     const { setColor } = useColor();
@@ -24,23 +25,14 @@ function Tour() {
                 />
             </Head>
             <Layout>
-                <div
-                    style={{
-                        perspective: "1px",
-                        height: "100vh",
-                        overflowX: "hidden",
-                        overflowY: "scroll",
-                        transformStyle: "preserve-3d",
-                        width: "100vw",
-                        marginTop: "10vw",
-                    }}
-                >
+                <DesktopContainer>
                     <Section
                         title="Tasting Tour"
                         backgroundColor="#20060a" // chocolate color
                         textColor="#fffde0" // beige color for text for high contrast
                         imageUrl="/tour.png"
-                        imageHeight="100vw"
+                        imageHeight="16rem"
+                        aspectRatio={1.6}
                         isHeader={true}
                     >
                         <div>
@@ -63,7 +55,7 @@ function Tour() {
                                         justifyContent: "center",
                                         // marginTop: "5vw",
                                         fontWeight: 500,
-                                        marginTop: "18vw",
+                                        marginTop: "3rem",
                                     }}
                                 >
                                     Reserve a Tour →
@@ -76,7 +68,8 @@ function Tour() {
                         backgroundColor="#bdeacc" // chocolate color
                         textColor="#000000" // beige color for text for high contrast
                         imageUrl="/hands.png"
-                        imageHeight="100vw"
+                        imageHeight="26rem"
+                        aspectRatio={1}
                     >
                         <div>{`Sibö’s Chocolate Tasting Tour is an interactive tasting experience and presentation on the history of chocolate at our artisan chocolate workshop, set in a garden just outside the quaint village of San Isidro de Heredia.`}</div>
                         <div>{`During the hour-long experience, our master chocolatiers share samples of fresh cacao fruit (when available) as well as roasted cacao beans, indigenous hot chocolate, as well as European-style bonbons freshly made on the premises.`}</div>
@@ -89,7 +82,8 @@ function Tour() {
                         backgroundColor="#3a1012" // chocolate color
                         textColor="#f4ede3" // beige color for text for high contrast
                         imageUrl="/hut.png"
-                        imageHeight="100vw"
+                        imageHeight="26rem"
+                        aspectRatio={1}
                     >
                         <FAQ faq="LOCATION">
                             {`Tasting tours are at our artisan chocolate workshop and restaurant in the hills of San Isidro de Heredia, just 30 minutes north of downtown San José and one mile off the highway to Guápiles (Route 32).`}
@@ -123,8 +117,8 @@ function Tour() {
                             {`Restaurant service is available onsite at Tournant del Campo. Check out their menu on Instagram at @tournantcr OPEN: Wednesday-Friday, 11 a.m. – 6 p.m. for lunch and afternoon café fare. Saturday and Sunday, 10 a.m. – 6 p.m. for Brunch, lunch and afternoon café fare. Please call to check special hours or make a group reservation at 2268-1335.`}
                         </FAQ>
                     </Section>
+                    </DesktopContainer>
                     <Bottom />
-                </div>
             </Layout>
         </>
     );
@@ -134,7 +128,9 @@ const FAQ = ({ faq, children }) => {
     return (
         <div>
             <b>{faq}</b>
-            <div style={{ marginTop: "5vw" }}>{children}</div>
+            <div style={{ marginTop: "1rem", 
+                marginBottom: "2rem",
+             }}>{children}</div>
         </div>
     );
 };

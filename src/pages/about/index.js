@@ -6,6 +6,8 @@ import Link from "next/link";
 import Swatch2 from "@/components/svg/Swatch2";
 import Bottom from "@/components/Bottom";
 import Head from "next/head";
+import DesktopContainer from "@/components/DesktopContainer";
+import Title from "@/components/Title";
 
 function About() {
     const { setColor } = useColor();
@@ -23,23 +25,14 @@ function About() {
                 />
             </Head>
             <Layout>
-                <div
-                    style={{
-                        perspective: "1px",
-                        height: "100vh",
-                        overflowX: "hidden",
-                        overflowY: "scroll",
-                        transformStyle: "preserve-3d",
-                        width: "100vw",
-                        marginTop: "10vw",
-                    }}
-                >
+                <DesktopContainer>
                     <Section
                         title="Our Inspiration"
                         backgroundColor="#FCEBD2" // chocolate color
                         textColor="#2f0B02" // beige color for text for high contrast
                         imageUrl="/sibo-4.png"
-                        imageHeight="100vw"
+                        imageHeight="16rem"
+                        aspectRatio={1.6}
                         isHeader={true}
                     >
                         <div>{`"Do Something great! Make things better."`}</div>
@@ -116,7 +109,8 @@ function About() {
                         backgroundColor="#321B1A" // chocolate color
                         textColor="#E8E2D9" // beige color for text for high contrast
                         imageUrl="/flowers.png"
-                        imageHeight="100vw"
+                        imageHeight="26rem"
+                        aspectRatio={1}
                     >
                         <div>
                             {
@@ -135,7 +129,8 @@ function About() {
                         backgroundColor="#B4D2C9" // chocolate color
                         textColor="#2f0B02" // beige color for text for high contrast
                         imageUrl="/light pods.png"
-                        imageHeight="100vw"
+                        imageHeight="26rem"
+                        aspectRatio={1}
                     >
                         <div>
                             {
@@ -158,7 +153,8 @@ function About() {
                         backgroundColor="#f8dbd8" // chocolate color
                         textColor="#46052c" // beige color for text for high contrast
                         imageUrl="/turtle.png"
-                        imageHeight="100vw"
+                        imageHeight="26rem"
+                        aspectRatio={1}
                     >
                         <div>
                             {
@@ -181,7 +177,8 @@ function About() {
                         backgroundColor="#522834"
                         textColor="#e9f1fb"
                         imageUrl="/compost.png"
-                        imageHeight="100vw"
+                        imageHeight="26rem"
+                        aspectRatio={1}
                     >
                         <div>
                             {
@@ -194,7 +191,8 @@ function About() {
                         backgroundColor="#f7faf1"
                         textColor="#101d38"
                         imageUrl="/wetland.png"
-                        imageHeight="100vw"
+                        imageHeight="26rem"
+                        aspectRatio={1}
                     >
                         <div>
                             {
@@ -217,7 +215,8 @@ function About() {
                         backgroundColor="#370d04" // chocolate color
                         textColor="#fef3ec" // beige color for text for high contrast
                         imageUrl="/carbon.png"
-                        imageHeight="100vw"
+                        imageHeight="26rem"
+                        aspectRatio={1}
                     >
                         <div>
                             {
@@ -240,7 +239,8 @@ function About() {
                         backgroundColor="#a53100" // chocolate color
                         textColor="#fff9ee" // beige color for text for high contrast
                         imageUrl="/history2.png"
-                        imageHeight="100vw"
+                        imageHeight="26rem"
+                        aspectRatio={1}
                     >
                         <div>
                             {`Three years. It took three years for historian Julio Fernandez Amón and journalist George Soriano to take the plunge and leave their day jobs in Costa Rica to follow a dream of making chocolate. The decision would come just in time for the great recession of 2008.`}
@@ -332,8 +332,8 @@ function About() {
                             {`In 2022, having weathered the Covid-19 pandemic, the business reorganized to prepare for new era in its history. With Alfredo now at the helm running the factory out of the business district of Escazu, George and Julio are focused on expanding into new markets and developing Sibö’s direct-to-consumer business online. If all goes well, you will be seeing a lot more of Sibö out in the wild. And when that happens, it will be thanks to you.`}
                         </div>
                     </Section>
-                    <Bottom />
-                </div>
+                </DesktopContainer>
+                <Bottom />
             </Layout>
         </>
     );

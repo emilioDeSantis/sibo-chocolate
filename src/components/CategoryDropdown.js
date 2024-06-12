@@ -98,9 +98,9 @@ const CategoryDropdown = ({}) => {
                         backgroundColor: color,
                         width: "100%",
                         height: "100vh",
-                        paddingTop: "20vw",
+                        paddingTop: "5rem",
                         color: "#333",
-                        fontSize: "7vw",
+                        fontSize: "1.6rem",
                         textTransform: "uppercase",
                         overflowY: "scroll",
                         position: "absolute",
@@ -122,7 +122,7 @@ const CategoryDropdown = ({}) => {
                             <div
                                 onClick={closeDropdown}
                                 style={{
-                                    paddingTop: "6vw",
+                                    paddingTop: "1.5rem",
                                     cursor: "pointer",
                                     color:
                                         router.asPath ===

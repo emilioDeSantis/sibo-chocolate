@@ -7,6 +7,7 @@ import Swatch2 from "@/components/svg/Swatch2";
 import Review from "@/components/Review";
 import Bottom from "@/components/Bottom";
 import Head from "next/head";
+import DesktopContainer from "@/components/DesktopContainer";
 
 function Reviews() {
     const { setColor } = useColor();
@@ -24,23 +25,14 @@ function Reviews() {
                 />
             </Head>
             <Layout>
-                <div
-                    style={{
-                        perspective: "1px",
-                        height: "100vh",
-                        overflowX: "hidden",
-                        overflowY: "scroll",
-                        transformStyle: "preserve-3d",
-                        width: "100vw",
-                        marginTop: "10vw",
-                    }}
-                >
+                <DesktopContainer>
                     <Section
                         title="Reviews"
                         backgroundColor="#20060a" // chocolate color
                         textColor="#fffde0" // beige color for text for high contrast
                         imageUrl="/sibo-3.png"
-                        imageHeight="100vw"
+                        imageHeight="16rem"
+                        aspectRatio={1.6}
                         isHeader={true}
                     >
                         <Review
@@ -64,7 +56,8 @@ function Reviews() {
                         backgroundColor="#ffe09b" // chocolate color
                         textColor="#2f0B02" // beige color for text for high contrast
                         imageUrl="/molin.png"
-                        imageHeight="100vw"
+                        imageHeight="26rem"
+                        aspectRatio={1}
                     >
                         <Award date="2010">
                             {`National Prize for Innovation, Costa Rica INNOVA, National Conference on Innovation`}
@@ -88,8 +81,8 @@ function Reviews() {
                             {`International Chocolate Awards, Americas, New York. SILVER: Lime-Apple caramel, Sea-salt caramel, Tequila-shot truffle, Lime-basil truffle`}
                         </Award>
                     </Section>
-                    <Bottom />
-                </div>
+                </DesktopContainer>
+                <Bottom />
             </Layout>
         </>
     );

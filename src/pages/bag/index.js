@@ -18,8 +18,8 @@
 //   if (!checkout) return <div>Loading...</div>;
 
 //   return (
-//     <div style={{ width: "100vw", padding: "4vw" }}>
-//       <h1 style={{ fontSize: "6vw", textAlign: "center" }}>Your Shopping Cart</h1>
+//     <div style={{ width: "100vw", padding: "1rem" }}>
+//       <h1 style={{ fontSize: "1.4rem", textAlign: "center" }}>Your Shopping Cart</h1>
 
 //       {checkout.lineItems.length ? (
 //         checkout.lineItems.map((lineItem) => (
@@ -32,17 +32,17 @@
 //           />
 //         ))
 //       ) : (
-//         <p style={{ fontSize: "4vw", textAlign: "center" }}>Your cart is empty</p>
+//         <p style={{ fontSize: "1rem", textAlign: "center" }}>Your cart is empty</p>
 //       )}
 
 //       <button
 //         style={{
 //           display: "block",
 //           width: "80vw",
-//           height: "6vw",
-//           margin: "4vw auto",
-//           fontSize: "4vw",
-//           borderRadius: "1vw",
+//           height: "1.4rem",
+//           margin: "1rem auto",
+//           fontSize: "1rem",
+//           borderRadius: "0.2rem",
 //           backgroundColor: "black",
 //           color: "white",
 //           border: "none",
@@ -58,11 +58,11 @@
 
 // const CartItem = ({ title, quantity, price, imageUrl }) => {
 //     return (
-//       <div style={{ display: "flex", justifyContent: "space-between", width: "80vw", margin: "2vw auto", borderBottom: "1px solid #000" }}>
-//         <img src={imageUrl} alt={title} style={{ width: "10vw", height: "10vw", objectFit: "cover" }}/>
-//         <h2 style={{ fontSize: "4vw" }}>{title}</h2>
-//         <p style={{ fontSize: "3vw" }}>{'Quantity: ' + quantity}</p>
-//         <p style={{ fontSize: "3vw" }}>{'Price: $' + price}</p>
+//       <div style={{ display: "flex", justifyContent: "space-between", width: "80vw", margin: "1.5remrem auto", borderBottom: "1px solid #000" }}>
+//         <img src={imageUrl} alt={title} style={{ width: "2.4rem", height: "2.4rem", objectFit: "cover" }}/>
+//         <h2 style={{ fontSize: "1rem" }}>{title}</h2>
+//         <p style={{ fontSize: "0.7rem" }}>{'Quantity: ' + quantity}</p>
+//         <p style={{ fontSize: "0.7rem" }}>{'Price: $' + price}</p>
 //       </div>
 //     );
 //   };
@@ -124,11 +124,11 @@ const Bag = () => {
                     flexDirection: "column",
                     justifyContent: "space-between",
                     width: "100%",
-                    marginTop: "10vw",
+                    marginTop: "2.4rem",
                     borderBottom: "2px solid #000",
                 }}
             >
-                <h2 style={{ fontSize: "8vw" }}>{lineItem.title}</h2>
+                <h2 style={{ fontSize: "2rem" }}>{lineItem.title}</h2>
                 <div
                     style={{
                         display: "flex",
@@ -141,8 +141,8 @@ const Bag = () => {
                             src={lineItem.variant.image.src}
                             alt={lineItem.title}
                             style={{
-                                width: "30vw",
-                                height: "30vw",
+                                width: "7rem",
+                                height: "7rem",
                                 objectFit: "cover",
                             }}
                         />
@@ -150,13 +150,13 @@ const Bag = () => {
                     <button
                         onClick={() => handleRemove(lineItem.id)}
                         style={{
-                            paddingBlock: "4vw",
-                            paddingInline: "7vw",
+                            paddingBlock: "1rem",
+                            paddingInline: "1.6rem",
                             backgroundColor: "#edc",
                             color: "#765",
-                            fontSize: "4vw",
+                            fontSize: "1rem",
                             border: "none",
-                            borderRadius: "1vw",
+                            borderRadius: "0.2rem",
                             cursor: "pointer",
                             height: "6",
                         }}
@@ -169,8 +169,8 @@ const Bag = () => {
                     style={{
                         display: "flex",
                         justifyContent: "space-between",
-                        marginTop: "8vw",
-                        marginBottom: '5vw'
+                        marginTop: "2rem",
+                        marginBottom: '1.2rem'
                     }}
                 >
                     <div
@@ -180,8 +180,8 @@ const Bag = () => {
                             justifyContent: "space-between",
                         }}
                     >
-                        <p style={{ fontSize: "5vw" }}>Each</p>
-                        <p style={{ fontSize: "5vw", fontWeight: 900 }}>
+                        <p style={{ fontSize: "1.2rem" }}>Each</p>
+                        <p style={{ fontSize: "1.2rem", fontWeight: 900 }}>
                         ${Number(lineItem.variant.price.amount).toFixed(2)}
                         </p>
                     </div>
@@ -193,13 +193,14 @@ const Bag = () => {
                             alignItems: "flex-start",
                         }}
                     >
-                        <p style={{ fontSize: "6vw" }}>Quantity</p>
+                        <p style={{ fontSize: "1.4rem" }}>Quantity</p>
 
                         <div
                             style={{
                                 display: "flex",
                                 alignItems: "center",
                                 justifyContent: "center",
+                                gap: "0.5rem",
                             }}
                         >
                             <button
@@ -210,20 +211,20 @@ const Bag = () => {
                                     )
                                 }
                                 style={{
-                                    padding: "2vw",
-                                    paddingInline: "4vw",
+                                    padding: "1.5remrem",
+                                    paddingInline: "1rem",
                                     backgroundColor: "#000",
                                     color: "#fff",
-                                    fontSize: "4vw",
+                                    fontSize: "1rem",
                                     border: "none",
-                                    borderRadius: "1vw",
+                                    borderRadius: "0.2rem",
                                     cursor: "pointer",
-                                    margin: "0 2vw",
+                                    margin: "0 1.5remrem",
                                 }}
                             >
                                 -
                             </button>
-                            <p style={{ fontSize: "6vw" }}>
+                            <p style={{ fontSize: "1.4rem" }}>
                                 {lineItem.quantity}
                             </p>
                             <button
@@ -234,15 +235,15 @@ const Bag = () => {
                                     )
                                 }
                                 style={{
-                                    padding: "2vw",
-                                    paddingInline: "4vw",
+                                    padding: "1.5remrem",
+                                    paddingInline: "1rem",
                                     backgroundColor: "#000",
                                     color: "#fff",
-                                    fontSize: "4vw",
+                                    fontSize: "1rem",
                                     border: "none",
-                                    borderRadius: "1vw",
+                                    borderRadius: "0.2rem",
                                     cursor: "pointer",
-                                    margin: "0 2vw",
+                                    margin: "0 1.5remrem",
                                 }}
                             >
                                 +
@@ -256,8 +257,8 @@ const Bag = () => {
                             justifyContent: "space-between",
                         }}
                     >
-                        <p style={{ fontSize: "5vw" }}>Total</p>
-                        <p style={{ fontSize: "5vw", fontWeight: 900 }}>
+                        <p style={{ fontSize: "1.2rem" }}>Total</p>
+                        <p style={{ fontSize: "1.2rem", fontWeight: 900 }}>
                         ${(Number(lineItem.variant.price.amount) * Number(lineItem.quantity)).toFixed(2)}
                         </p>
                     </div>
@@ -271,7 +272,7 @@ const Bag = () => {
             <div
                 style={{
                     width: "100vw",
-                    padding: "3vw",
+                    padding: "4vw",
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "flex-start",
@@ -281,10 +282,10 @@ const Bag = () => {
             >
                 <h1
                     style={{
-                        fontSize: "15vw",
+                        fontSize: "1.2rem",
                         textAlign: "center",
-                        marginTop: "20vw",
-                        // marginBottom: "8vw",
+                        marginTop: "8rem",
+                        // marginBottom: "2rem",
                         fontWeight: 900,
                     }}
                 >
@@ -296,13 +297,13 @@ const Bag = () => {
                         <CartItem key={lineItem.id} lineItem={lineItem} />
                     ))
                 ) : (
-                    <p style={{ fontSize: "4vw", textAlign: "center" }}>
+                    <p style={{ fontSize: "1rem", textAlign: "center" }}>
                         Your bag is empty
                     </p>
                 )}
 
                 {checkout.totalPrice && (
-                    <h2 style={{ fontSize: "6vw", textAlign: "center", marginTop: '10vw', }}>
+                    <h2 style={{ fontSize: "1.4rem", textAlign: "center", marginTop: '2.4rem', }}>
                         Total: ${Number(checkout.totalPrice.amount).toFixed(2)}
                     </h2>
                 )}
@@ -311,15 +312,15 @@ const Bag = () => {
                     style={{
                         display: "block",
                         width: "100%",
-                        paddingBlock: "3vw",
-                        fontSize: "4vw",
-                        borderRadius: "1vw",
+                        paddingBlock: "0.7rem",
+                        fontSize: "1rem",
+                        borderRadius: "0.2rem",
                         backgroundColor: "black",
                         color: "white",
                         border: "none",
                         cursor: "pointer",
-                        marginTop: '10vw',
-                        marginBottom:'10vw',
+                        marginTop: '2.4rem',
+                        marginBottom:'2.4rem',
                     }}
                     onClick={() => (window.location.href = checkout.webUrl)}
                 >

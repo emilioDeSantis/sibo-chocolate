@@ -139,7 +139,14 @@ a {
 .mobile {
     display: flex;
 }
+
+.mobile-product {
+    display: block;
+}
 .desktop {
+    display: none;
+}
+.desktop-grid {
     display: none;
 }
 
@@ -240,8 +247,16 @@ a {
     .mobile {
         display: none; /* Hide on desktop */
     }
+
+    .mobile-product {
+        display: none;
+    }
     .desktop {
         display: flex;
+    }
+
+    .desktop-grid {
+        display: grid;
     }
 
     .hero {

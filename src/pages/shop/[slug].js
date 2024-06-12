@@ -135,7 +135,7 @@ const Category = ({ category }) => {
                     </Head>
                     <div
                         style={{
-                            paddingTop: "25vw",
+                            paddingTop: "6rem",
                             paddingBottom: "0vw",
                         }}
                     >
@@ -151,20 +151,20 @@ const Category = ({ category }) => {
                                     display: "flex",
                                     justifyContent: "center",
                                     background: category.color,
-                                    marginInline: "4vw",
-                                    paddingTop: "3vw",
-                                    paddingBottom: "1vw",
+                                    marginInline: "1rem",
+                                    paddingTop: "0.7rem",
+                                    paddingBottom: "0.2rem",
                                     alignItems: "center",
                                     // border: '1px solid white',
                                     width: "100%",
-                                    borderRadius: "1vw",
+                                    borderRadius: "5px",
                                     // background: 'white',
                                 }}
                             >
                                 <div
                                     style={{
                                         textTransform: "uppercase",
-                                        fontSize: "12vw",
+                                        fontSize: "2.8rem",
                                         fontWeight: "900",
                                         color: isDarkerThan50(category.color)
                                             ? "white"

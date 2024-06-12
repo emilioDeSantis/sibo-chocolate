@@ -7,14 +7,14 @@ export const SocialLinks = () => {
             style={{
                 display: "flex",
                 justifyContent: "space-between",
-                width: "60vw",
-                marginBottom: '5vw',
+                width: "15rem",
+                marginBottom: '1.2rem',
             }}
         >
             <Link href="https://www.facebook.com/SiboChocolateCostaRica">
                 <svg
-                    width="8vw"
-                    height="8vw"
+                    width="2rem"
+                    height="2rem"
                     viewBox="0 0 256 256"
                     xmlns="http://www.w3.org/2000/svg"
                     style={{ marginRight: "10px" }}
@@ -31,8 +31,8 @@ export const SocialLinks = () => {
             </Link>
             <Link href="https://www.instagram.com/sibochocolate/">
                 <svg
-                    width="8vw"
-                    height="8vw"
+                    width="2rem"
+                    height="2rem"
                     viewBox="0 0 256 256"
                     xmlns="http://www.w3.org/2000/svg"
                     style={{ marginRight: "10px" }}
@@ -45,8 +45,8 @@ export const SocialLinks = () => {
             </Link>
             <Link href="https://www.youtube.com/@SiboChocolate-xf8fn">
                 <svg
-                    width="12vw"
-                    height="8vw"
+                    width="3rem"
+                    height="2rem"
                     viewBox="-35.20005 -41.33325 305.0671 247.9995"
                     xmlns="http://www.w3.org/2000/svg"
                     style={{ marginRight: "10px" }}
@@ -63,8 +63,8 @@ export const SocialLinks = () => {
             </Link>
             <Link href="https://wa.me/150684666161">
                 <svg
-                    width="8vw"
-                    height="8vw"
+                    width="2rem"
+                    height="2rem"
                     viewBox="0 0 308 308"
                     xmlns="http://www.w3.org/2000/svg"
                     style={{ marginRight: "10px" }}

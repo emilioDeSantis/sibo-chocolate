@@ -100,11 +100,11 @@ const Header = ({ showBanner }) => {
                         backgroundColor: "#842", // or any color you prefer
                         color: "#fffc",
                         textAlign: "center",
-                        padding: "1.6vw",
+                        padding: "0.3rem",
                         // position: "fixed",
                         width: "100%",
                         fontWeight: 600,
-                        fontSize: "4vw",
+                        fontSize: "0.9rem",
                         zIndex: 1001, // to make sure it appears above everything else
                     }}
                 >
@@ -206,8 +206,8 @@ const Header = ({ showBanner }) => {
                                     display: "inline-flex",
                                     justifyContent: "center",
                                     alignItems: "center",
-                                    width: "8vw",
-                                    height: "12vw",
+                                    width: "2rem",
+                                    height: "3rem",
                                     // backgroundColor: "#551611",
                                     borderRadius: "10000px",
                                     borderRadius: "1vw",
@@ -225,7 +225,7 @@ const Header = ({ showBanner }) => {
                                 </div>
                                 <ShoppingBagIcon
                                     color={textColor}
-                                    height={"7vw"}
+                                    height={"1.6rem"}
                                 />
                             </Link>
                         )}
