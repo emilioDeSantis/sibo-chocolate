@@ -189,7 +189,10 @@ const Home = ({ categories, products }) => {
     return (
         <>
             <Head>
-                <title>SIBÖ CHOCOLATE | Costa Rican Chocolate Made Fresh from the Source</title>
+                <title>
+                    SIBÖ CHOCOLATE | Costa Rican Chocolate Made Fresh from the
+                    Source
+                </title>
                 <meta
                     name="description"
                     content="Costa Rica’s leading origin chocolate maker, fine artisan chocolates made fresh from the source in Costa Rica since 2007."
@@ -227,133 +230,65 @@ const Home = ({ categories, products }) => {
                     <div
                         style={{
                             display: "flex",
+                            position: "absolute",
+                            top: "clamp(0rem,30vw,10rem)",
                             flexDirection: "column",
-                            height: "92vh",
                             width: "100vw",
                             alignItems: "center",
                             justifyContent: "space-between",
-                            paddingTop: "clamp(0rem,30vw,10rem)",
-                            paddingBottom: "40px",
-                            position: "absolute",
-                            top: 0,
                         }}
                     >
                         <div
                             style={{
-                                display: "flex",
-                                flexDirection: "column",
-                                width: "100vw",
-                                alignItems: "center",
-                                justifyContent: "space-between",
+                                width: "12rem",
+                                position: "absolute",
                             }}
                         >
-                            {/* <div
-                            style={{
-                                width: "40vw",
-                                filter: "blur(6px)",
-                            }}
-                        >
-                            <Logo2 color={"#000000"} />
-                        </div> */}
-
-                            <div
-                                style={{
-                                    width: "12rem",
-                                    position: "absolute",
-                                }}
-                            >
-                                <Logo2 color={"#ffffff"} />
-                            </div>
-                        </div>
-
-                        <div
-                            style={{
-                                display: "flex",
-                                flexDirection: "column",
-                                width: "100vw",
-                                alignItems: "center",
-                                justifyContent: "flex-end",
-                            }}
-                        >
-                            {/* <div
-                            style={{
-                                width: "100vw",
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: "center",
-                            }}
-                        >
-                            {images.map((image, index) => {
-                                const currentPosition =
-                                    (currentImage - index + images.length) %
-                                    images.length;
-                                return (
-                                    <div
-                                        style={{
-                                            display: "flex",
-                                            flexDirection: "column",
-                                            position: "absolute",
-                                            justifyContent: "flex-end",
-                                        }}
-                                    >
-                                       
-                                        <div
-                                            key={index}
-                                            style={{
-                                                opacity:
-                                                    currentPosition == 0
-                                                        ? 1
-                                                        : 0,
-                                                transition:
-                                                    "3s ease-in-out opacity",
-                                                color: "white",
-                                                // textTransform: "uppercase",
-                                                // fontWeight: 900,
-                                                textAlign: "center",
-                                                fontSize: "12vw",
-                                                lineHeight: "90%",
-                                                textAlign: "center",
-                                                marginInline: "8vw",
-                                                textShadow: "0px 0px 20px #000",
-                                                fontFamily: "pablo",
-                                            }}
-                                        >
-                                            {images[index].caption}
-                                        </div>
-                                    </div>
-                                );
-                            })}
-                        </div> */}
-                            <Link href="/shop" passHref>
-                                <div
-                                    style={{
-                                        fontSize: "4.2rem",
-                                        // textTransform: "uppercase",
-                                        paddingTop: "0.4em",
-                                        width: "84vw",
-                                        paddingBottom: "0.2em",
-                                        border: "none",
-                                        // background: "#FFD79A",
-                                        // background: "#33161299",
-                                        // borderRadius: '100px',
-                                        color: "#100606",
-                                        color: "#fff",
-                                        textShadow: "0px 0px 20px #000",
-                                        cursor: "pointer",
-                                        display: "flex",
-                                        alignItems: "center",
-                                        justifyContent: "center",
-                                        // marginTop: "5vw",
-                                        // fontWeight: 500,
-                                        // boxShadow: "0px 2px 8px #0009",
-                                        fontFamily: "pablo",
-                                    }}
-                                >
-                                    Shop Now ⟹
-                                </div>
-                            </Link>
+                            <Logo2 color={"#ffffff"} />
                         </div>
                     </div>
+
+                    <div
+                        style={{
+                            position: "absolute",
+                            bottom: "2rem",
+                            display: "flex",
+                            flexDirection: "column",
+                            width: "100vw",
+                            alignItems: "center",
+                            justifyContent: "flex-end",
+                        }}
+                    >
+                        <Link href="/shop" passHref>
+                            <div
+                                style={{
+                                    fontSize: "4.2rem",
+                                    // textTransform: "uppercase",
+                                    paddingTop: "0.4em",
+                                    width: "84vw",
+                                    paddingBottom: "0.2em",
+                                    border: "none",
+                                    // background: "#FFD79A",
+                                    // background: "#33161299",
+                                    // borderRadius: '100px',
+                                    color: "#100606",
+                                    color: "#fff",
+                                    textShadow: "0px 0px 20px #000",
+                                    cursor: "pointer",
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "center",
+                                    // marginTop: "5vw",
+                                    // fontWeight: 500,
+                                    // boxShadow: "0px 2px 8px #0009",
+                                    fontFamily: "pablo",
+                                }}
+                            >
+                                Shop Now ⟹
+                            </div>
+                        </Link>
+                    </div>
+                    {/* </div> */}
 
                     <HomeDesktopContainer background={"#311d1c"}>
                         <div
