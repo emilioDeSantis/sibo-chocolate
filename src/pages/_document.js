@@ -11,7 +11,7 @@ export default function Document() {
                 />
                 <meta
                     property="og:image"
-                    content="https://sibo-chocolate.vercel.app/_next/image?url=%2Fhero.png&w=3840&q=75"
+                    content="https://sibochocolate/ogsibo.png"
                 />
                 <meta property="og:url" content="https://sibochocolate.com" />
                 <meta property="og:type" content="website" />
