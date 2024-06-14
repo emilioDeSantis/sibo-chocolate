@@ -61,7 +61,10 @@ export const SocialLinks = () => {
                 ></path>
                 </svg>
             </Link>
-            <Link href="https://wa.me/150684666161">
+            <Link href="https://wa.me/50684666161">
+
+
+            
                 <svg
                     width="2rem"
                     height="2rem"
